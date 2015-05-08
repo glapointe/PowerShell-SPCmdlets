@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.MappedFolder" SupportedTrustLevels="FullTrust" SupportedDeploymentScopes="Package" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <ProjectItemFolder Target="CONFIG\POWERSHELL" Type="RootFile" />
+</ProjectItem>

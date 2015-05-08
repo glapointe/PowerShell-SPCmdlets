@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Types>
+  <Type>
+    <Name>Microsoft.SharePoint.Administration.SPFarm</Name>
+    <Members>
+      <ScriptProperty>
+        <Name>DeveloperDashboard</Name>
+        <GetScriptBlock>[Microsoft.SharePoint.Administration.SPWebService]::ContentService.DeveloperDashboardSettings</GetScriptBlock>
+      </ScriptProperty>
+    </Members>
+  </Type>
+  <Type>
+    <Name>Microsoft.SharePoint.SPList</Name>
+    <Members>
+      <ScriptProperty>
+        <Name>Url</Name>
+        <GetScriptBlock>$this.ParentWeb.Site.MakeFullUrl($this.RootFolder.ServerRelativeUrl)</GetScriptBlock>
+      </ScriptProperty>
+    </Members>
+  </Type>
+</Types>

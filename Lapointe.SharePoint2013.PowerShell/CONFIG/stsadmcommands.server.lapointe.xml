@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<commands>
+  <command
+    name="gl-fixpublishingpagespagelayouturl"
+    class="Lapointe.SharePoint.PowerShell.StsAdm.Pages.FixPublishingPagesPageLayoutUrl,$SharePoint.Project.AssemblyFullName$" />
+  <command
+    name="gl-enumavailablepagelayouts"
+    class="Lapointe.SharePoint.PowerShell.StsAdm.Pages.EnumAvailablePageLayouts,$SharePoint.Project.AssemblyFullName$" />
+  <command
+    name="gl-createpublishingpage"
+    class="Lapointe.SharePoint.PowerShell.StsAdm.Pages.CreatePublishingPage,$SharePoint.Project.AssemblyFullName$" />
+  <command
+	  name="gl-listaudiencetargeting"
+	  class="Lapointe.SharePoint.PowerShell.StsAdm.Lists.ListAudienceTargeting,$SharePoint.Project.AssemblyFullName$" />
+  <command
+    name="gl-exportaudiences"
+    class="Lapointe.SharePoint.PowerShell.StsAdm.Audiences.ExportAudiences,$SharePoint.Project.AssemblyFullName$" />
+  <command
+	  name="gl-importaudiences"
+	  class="Lapointe.SharePoint.PowerShell.StsAdm.Audiences.ImportAudiences,$SharePoint.Project.AssemblyFullName$" />
+  <command
+	  name="gl-createaudience"
+	  class="Lapointe.SharePoint.PowerShell.StsAdm.Audiences.CreateAudience,$SharePoint.Project.AssemblyFullName$" />
+  <command
+	  name="gl-addaudiencerule"
+	  class="Lapointe.SharePoint.PowerShell.StsAdm.Audiences.AddAudienceRule,$SharePoint.Project.AssemblyFullName$" />
+  <command
+	  name="gl-deleteaudience"
+	  class="Lapointe.SharePoint.PowerShell.StsAdm.Audiences.DeleteAudience,$SharePoint.Project.AssemblyFullName$" />
+  <command
+	  name="gl-enumaudiencerules"
+	  class="Lapointe.SharePoint.PowerShell.StsAdm.Audiences.EnumAudienceRules,$SharePoint.Project.AssemblyFullName$" />
+  <command
+	  name="gl-exportnavigation"
+	  class="Lapointe.SharePoint.PowerShell.StsAdm.SiteCollections.ExportNavigation,$SharePoint.Project.AssemblyFullName$" />
+  <command
+	  name="gl-importnavigation"
+	  class="Lapointe.SharePoint.PowerShell.StsAdm.SiteCollections.ImportNavigation,$SharePoint.Project.AssemblyFullName$" />
+  <command
+	  name="gl-retargetcontentquerywebpart"
+	  class="Lapointe.SharePoint.PowerShell.StsAdm.WebParts.RetargetContentQueryWebPart,$SharePoint.Project.AssemblyFullName$" />
+  <command
+	  name="gl-setpictureurl"
+	  class="Lapointe.SharePoint.PowerShell.StsAdm.UserProfiles.SetPictureUrl,$SharePoint.Project.AssemblyFullName$" />
+  <!-- command
+	  name="gl-updatev2tov3upgradeareaurlmappings"
+	  class="Lapointe.SharePoint.PowerShell.StsAdm.SiteCollections.UpdateV2ToV3UpgradeAreaUrlMappings,$SharePoint.Project.AssemblyFullName$" / -->
+
+</commands>

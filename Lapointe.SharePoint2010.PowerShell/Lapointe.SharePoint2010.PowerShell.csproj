@@ -1,0 +1,563 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{229309DE-DB5E-4824-98AD-DE321A30388B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Lapointe.SharePoint.PowerShell</RootNamespace>
+    <AssemblyName>Lapointe.SharePoint.PowerShell</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BB1F664B-9266-4fd6-B973-E1E44974B511};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+    <ActiveDeploymentConfiguration>PowerShell</ActiveDeploymentConfiguration>
+    <FileUpgradeFlags>40</FileUpgradeFlags>
+    <UpgradeBackupLocation>W:\Github\PowerShell-SPCmdlets\Backup\Lapointe.SharePoint2010.PowerShell\</UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'DebugMOSS|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;MOSS,SP2010</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ReleaseMOSS|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;MOSS,SP2010</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'DebugFoundation|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug Foundation\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;SP2010</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\Lapointe.SharePoint.PowerShell.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisInputAssembly>bin\Debug Foundation\Lapointe.SharePoint.PowerShell.dll</CodeAnalysisInputAssembly>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ReleaseFoundation|AnyCPU' ">
+    <OutputPath>bin\Release Foundation\</OutputPath>
+    <DefineConstants>TRACE;SP2010</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\Lapointe.SharePoint.PowerShell.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisInputAssembly>bin\Release Foundation\Lapointe.SharePoint.PowerShell.dll</CodeAnalysisInputAssembly>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Lapointe.PowerShell.MamlGenerator, Version=1.0.0.0, Culture=neutral, PublicKeyToken=313d176eae804710, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ReferenceAssemblies\Lapointe.PowerShell.MamlGenerator.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.BusinessData, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ReferenceAssemblies\Microsoft.BusinessData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Policy, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ReferenceAssemblies\Microsoft.Office.Policy.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Server, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ReferenceAssemblies\Microsoft.Office.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Server.Search, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ReferenceAssemblies\Microsoft.Office.Server.Search.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Server.Search.Connector, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ReferenceAssemblies\Microsoft.Office.Server.Search.Connector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Server.UserProfiles, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ReferenceAssemblies\Microsoft.Office.Server.UserProfiles.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Word.Server, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ReferenceAssemblies\Microsoft.Office.Word.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ReferenceAssemblies\Microsoft.SharePoint.dll</HintPath>
+    </Reference>
+    <Reference Include="microsoft.sharepoint.portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ReferenceAssemblies\microsoft.sharepoint.portal.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Powershell">
+      <HintPath>ReferenceAssemblies\Microsoft.SharePoint.Powershell.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ReferenceAssemblies\Microsoft.SharePoint.Publishing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Search, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ReferenceAssemblies\Microsoft.SharePoint.Search.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Security, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ReferenceAssemblies\Microsoft.SharePoint.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Taxonomy, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ReferenceAssemblies\Microsoft.SharePoint.Taxonomy.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.DataVisualization">
+      <HintPath>C:\Program Files (x86)\Microsoft Chart Controls\Assemblies\System.Web.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Management.Automation" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cmdlets\Audiences\SPCmdletNewAudienceRule.cs" />
+    <Compile Include="Cmdlets\Audiences\SPCmdletGetAudienceManager.cs" />
+    <Compile Include="Cmdlets\Audiences\SPCmdletGetAudience.cs" />
+    <Compile Include="Cmdlets\Audiences\SPCmdletSetAudience.cs" />
+    <Compile Include="Cmdlets\Audiences\SPCmdletNewAudience.cs" />
+    <Compile Include="Cmdlets\Audiences\SPCmdletRemoveAudience.cs" />
+    <Compile Include="Cmdlets\Audiences\SPCmdletImportAudiences.cs" />
+    <Compile Include="Cmdlets\Audiences\SPCmdletExportAudiences.cs" />
+    <Compile Include="Cmdlets\Audiences\SPCmdletExportAudienceRules.cs" />
+    <Compile Include="Cmdlets\ContentTypes\SPCmdletGetContentTypeUsage.cs" />
+    <Compile Include="Cmdlets\ContentTypes\SPCmdletPropagateContentType.cs" />
+    <Compile Include="Cmdlets\ContentTypes\SPCmdletExportContentType.cs" />
+    <Compile Include="Cmdlets\ContentTypes\SPCmdletCopyContentType.cs" />
+    <Compile Include="Cmdlets\ContentTypes\SPCmdletGetContentType.cs" />
+    <Compile Include="Cmdlets\Farm\SPCmdletBackupSites.cs" />
+    <Compile Include="Cmdlets\Farm\SPCmdletGetDeveloperDashboard.cs" />
+    <Compile Include="Cmdlets\Farm\SPCmdletSetDeveloperDashboard.cs" />
+    <Compile Include="Cmdlets\Features\SPCmdletDisableFeature.cs" />
+    <Compile Include="Cmdlets\Features\SPCmdletGetFeatureActivations.cs" />
+    <Compile Include="Cmdlets\Groups\SPCmdletRemoveGroupPermission.cs" />
+    <Compile Include="Cmdlets\Groups\SPCmdletAddGroupPermission.cs" />
+    <Compile Include="Cmdlets\Groups\SPCmdletGetGroup.cs" />
+    <Compile Include="Cmdlets\Groups\SPCmdletNewGroup.cs" />
+    <Compile Include="Cmdlets\Groups\SPCmdletRemoveGroup.cs" />
+    <Compile Include="Cmdlets\Lists\SPCmdletNewFile.cs" />
+    <Compile Include="Cmdlets\Lists\SPCmdletNewFolder.cs" />
+    <Compile Include="Cmdlets\Lists\SPCmdletAddEventReceiver.cs" />
+    <Compile Include="Cmdlets\Lists\SPCmdletGetListOverlays.cs" />
+    <Compile Include="Cmdlets\Lists\SPCmdletGetCheckedOutFiles.cs" />
+    <Compile Include="Cmdlets\Lists\SPCmdletGetFile.cs" />
+    <Compile Include="Cmdlets\Lists\SPCmdletNewList.cs" />
+    <Compile Include="Cmdlets\Lists\SPCmdletRemoveField.cs" />
+    <Compile Include="Cmdlets\Lists\SPCmdletReplaceListContent.cs" />
+    <Compile Include="Cmdlets\Lists\SPCmdletSetListAudienceTargeting.cs" />
+    <Compile Include="Cmdlets\Lists\SPCmdletSetListOverlay.cs" />
+    <Compile Include="Cmdlets\ManagedMetadata\SPCmdletImportTerms.cs" />
+    <Compile Include="Cmdlets\Pages\SPCmdletAddWikiPageHtml.cs" />
+    <Compile Include="Cmdlets\Pages\SPCmdletNewWikiPage.cs" />
+    <Compile Include="Cmdlets\Pages\SPCmdletGetPublishingPageLayout.cs" />
+    <Compile Include="Cmdlets\Pages\SPCmdletResetCustomizedPages.cs" />
+    <Compile Include="Cmdlets\Pages\SPCmdletGetCustomizedPages.cs" />
+    <Compile Include="Cmdlets\Pages\SPCmdletGetPublishingPage.cs" />
+    <Compile Include="Cmdlets\Pages\SPCmdletNewPublishingPage.cs" />
+    <Compile Include="Cmdlets\Pages\SPCmdletSetWikiPageLayout.cs" />
+    <Compile Include="Cmdlets\PipeBindObjects\SPFolderPipeBind.cs" />
+    <Compile Include="Cmdlets\PipeBindObjects\SPWordConversionJobPipeBind.cs" />
+    <Compile Include="Cmdlets\PipeBindObjects\SPWordServiceApplicationPipeBind.cs" />
+    <Compile Include="Cmdlets\PipeBindObjects\TypePipeBind.cs" />
+    <Compile Include="Cmdlets\PipeBindObjects\PropertiesPipeBind.cs" />
+    <Compile Include="Cmdlets\PipeBindObjects\SPGroupPipeBind.cs" />
+    <Compile Include="Cmdlets\PipeBindObjects\SPTaxonomyTermPipeBind.cs" />
+    <Compile Include="Cmdlets\PipeBindObjects\SPTaxonomyTermSetPipeBind.cs" />
+    <Compile Include="Cmdlets\PipeBindObjects\SPTaxonomyGroupPipeBind.cs" />
+    <Compile Include="Cmdlets\PipeBindObjects\SPListItemPipeBind.cs" />
+    <Compile Include="Cmdlets\PipeBindObjects\SPTaxonomyTermStorePipeBind.cs" />
+    <Compile Include="Cmdlets\PipeBindObjects\XmlDocumentPipeBind.cs" />
+    <Compile Include="Cmdlets\PipeBindObjects\SPTaxonomySessionPipeBind.cs" />
+    <Compile Include="Cmdlets\PipeBindObjects\SPPageLayoutPipeBind.cs" />
+    <Compile Include="Cmdlets\SiteCollections\SPCmdletClearHttpContext.cs" />
+    <Compile Include="Cmdlets\SiteCollections\SPCmdletConvertToSite.cs" />
+    <Compile Include="Cmdlets\SiteCollections\SPCmdletExportNavigation.cs" />
+    <Compile Include="Cmdlets\SiteCollections\SPCmdletGetAvailableWebTemplates.cs" />
+    <Compile Include="Cmdlets\SiteCollections\SPCmdletImportNavigation.cs" />
+    <Compile Include="Cmdlets\SiteCollections\SPCmdletMoveWeb.cs" />
+    <Compile Include="Cmdlets\SiteCollections\SPCmdletRepairSite.cs" />
+    <Compile Include="Cmdlets\SiteCollections\SPCmdletSetHttpContext.cs" />
+    <Compile Include="Cmdlets\Themes\SPCmdletResetTheme.cs" />
+    <Compile Include="Cmdlets\SPRemoveCmdletBaseCustom.cs" />
+    <Compile Include="Cmdlets\SPNewCmdletBaseCustom.cs" />
+    <Compile Include="Cmdlets\SPSetCmdletBaseCustom.cs" />
+    <Compile Include="Cmdlets\Features\SPCmdletEnableFeature.cs" />
+    <Compile Include="Cmdlets\Lists\SPCmdletPublishListItems.cs" />
+    <Compile Include="Cmdlets\Pages\SPCmdletRepairPageLayoutUrl.cs" />
+    <Compile Include="Cmdlets\PipeBindObjects\SPContentTypePipeBind.cs" />
+    <Compile Include="Cmdlets\Lists\SPCmdletDeleteList.cs" />
+    <Compile Include="Cmdlets\Lists\SPCmdletCopyList.cs" />
+    <Compile Include="Cmdlets\Lists\SPCmdletCopyListSecurity.cs" />
+    <Compile Include="Cmdlets\Lists\SPCmdletImportListSecurity.cs" />
+    <Compile Include="Cmdlets\Lists\SPCmdletExportListSecurity.cs" />
+    <Compile Include="Cmdlets\Lists\SPCmdletExport.cs" />
+    <Compile Include="Cmdlets\Lists\SPCmdletExportImport.cs" />
+    <Compile Include="Cmdlets\Lists\SPCmdletExportWeb2.cs" />
+    <Compile Include="Cmdlets\Lists\SPCmdletGetList.cs" />
+    <Compile Include="Cmdlets\Lists\SPCmdletImportWeb2.cs" />
+    <Compile Include="Cmdlets\PipeBindObjects\SPListPipeBind.cs" />
+    <Compile Include="Cmdlets\Quotas\SPCmdletSetQuotaTemplate.cs" />
+    <Compile Include="Cmdlets\Quotas\SPCmdletSetQuota.cs" />
+    <Compile Include="Cmdlets\PipeBindObjects\SPFilePipeBind.cs" />
+    <Compile Include="Cmdlets\SPCmdletCustom.cs" />
+    <Compile Include="Cmdlets\SPGetCmdletBaseCustom.cs" />
+    <Compile Include="Cmdlets\SPValidators\ValidateFileExistsAttribute.cs" />
+    <Compile Include="Cmdlets\SPValidators\ValidateDirectoryExistsAttribute.cs" />
+    <Compile Include="Cmdlets\SPValidators\ValidateDirectoryExistsAndValidFileNameAttribute.cs" />
+    <Compile Include="Cmdlets\ManagedMetadata\SPCmdletExportTerms.cs" />
+    <Compile Include="Cmdlets\TimerJobs\SPCmdletGetRunningTimerJobs.cs" />
+    <Compile Include="Cmdlets\TimerJobs\SPCmdletStartAdminJob.cs" />
+    <Compile Include="Cmdlets\UserProfiles\SPCmdletGetUserProfileChanges.cs" />
+    <Compile Include="Cmdlets\UserProfiles\SPCmdletSetProfilePictureUrl.cs" />
+    <Compile Include="Cmdlets\Users\SPCmdletRemoveAllUsers.cs" />
+    <Compile Include="Cmdlets\WebApplications\SPCmdletAddWebApplicationUserPolicy.cs" />
+    <Compile Include="Cmdlets\WebParts\SPCmdletCopyWebPart.cs" />
+    <Compile Include="Cmdlets\WebParts\SPCmdletReplaceWebPartType.cs" />
+    <Compile Include="Cmdlets\WebParts\SPCmdletSetWebPart.cs" />
+    <Compile Include="Cmdlets\WebParts\SPCmdletAddListViewWebPart.cs" />
+    <Compile Include="Cmdlets\WebParts\SPCmdletGetWebPartList.cs" />
+    <Compile Include="Cmdlets\WebParts\SPCmdletGetLimitedWebPartManager.cs" />
+    <Compile Include="Cmdlets\PipeBindObjects\SPLimitedWebPartManagerPipeBind.cs" />
+    <Compile Include="Cmdlets\WebParts\SPCmdletImportWebPart.cs" />
+    <Compile Include="Cmdlets\WebParts\SPCmdletMoveWebPart.cs" />
+    <Compile Include="Cmdlets\WebParts\SPCmdletReplaceWebPartContent.cs" />
+    <Compile Include="Cmdlets\WebParts\SPCmdletSetContentQueryWebPartTarget.cs" />
+    <Compile Include="Cmdlets\WordAutomation\SPCmdletGetWordConversionJobStatus.cs" />
+    <Compile Include="Cmdlets\WordAutomation\SPCmdletNewWordConversionJob.cs" />
+    <Compile Include="Common\Audiences\AddAudienceRule.cs" />
+    <Compile Include="Common\Audiences\CreateAudience.cs" />
+    <Compile Include="Common\Audiences\DeleteAudience.cs" />
+    <Compile Include="Common\Audiences\EnumAudienceRules.cs" />
+    <Compile Include="Common\Audiences\ExportAudiences.cs" />
+    <Compile Include="Common\Audiences\ImportAudiences.cs" />
+    <Compile Include="Common\ContentTypes\CopyContentTypes.cs" />
+    <Compile Include="Common\ContentTypes\ExportContentTypes.cs" />
+    <Compile Include="Common\ContentTypes\PropagateContentType.cs" />
+    <Compile Include="Common\Farm\BackupSites.cs" />
+    <Compile Include="Common\Lists\AddEventReceiver.cs" />
+    <Compile Include="Common\Lists\AddList.cs" />
+    <Compile Include="Common\Lists\GetListOverlays.cs" />
+    <Compile Include="Common\Lists\CopyListSecurity.cs" />
+    <Compile Include="Common\Lists\ListAudienceTargeting.cs" />
+    <Compile Include="Common\Lists\ReplaceFieldValues.cs" />
+    <Compile Include="Common\Lists\SetListOverlay.cs" />
+    <Compile Include="Common\Pages\WikiPageUtilities.cs" />
+    <Compile Include="Common\UserProfiles\SetPictureUrl.cs" />
+    <Compile Include="Enums\WikiPageLayout.cs" />
+    <Compile Include="StsAdm\Lists\AddEventReceiver.cs" />
+    <Compile Include="StsAdm\Lists\AddList.cs" />
+    <Compile Include="StsAdm\Lists\DeleteListField.cs" />
+    <Compile Include="StsAdm\Lists\ReplaceFieldValues.cs" />
+    <Compile Include="Common\ManagedMetadata\ImportTerms.cs" />
+    <Compile Include="Common\Pages\CreatePublishingPage.cs" />
+    <Compile Include="Common\Lists\DeleteList.cs" />
+    <Compile Include="Common\Lists\ExportList.cs" />
+    <Compile Include="Common\Lists\ExportListSecurity.cs" />
+    <Compile Include="Common\Lists\ImportList.cs" />
+    <Compile Include="Common\Lists\ImportListSecurity.cs" />
+    <Compile Include="Common\Lists\PublishItems.cs" />
+    <Compile Include="Common\Pages\EnumUnGhostedFiles.cs" />
+    <Compile Include="Common\Pages\FixPublishingPagesPageLayoutUrl.cs" />
+    <Compile Include="Common\Pages\ReGhostFile.cs" />
+    <Compile Include="Common\SiteCollections\ConvertSubSiteToSiteCollection.cs" />
+    <Compile Include="Common\SiteCollections\ExportNavigation.cs" />
+    <Compile Include="Common\SiteCollections\ImportNavigation.cs" />
+    <Compile Include="Common\SiteCollections\MoveWeb.cs" />
+    <Compile Include="StsAdm\SiteCollections\MoveWeb.cs" />
+    <Compile Include="Common\SiteCollections\RepairSiteCollectionImportedFromSubSite.cs" />
+    <Compile Include="Common\ManagedMetadata\ExportTerms.cs" />
+    <Compile Include="Common\TimerJobs\ExecAdmSvcJobs.cs" />
+    <Compile Include="Common\WebApplications\AddUserPolicyForWebApp.cs" />
+    <Compile Include="Common\WebApplications\SetBackConnectionHostNames.cs" />
+    <Compile Include="Common\WebParts\AddListViewWebPart.cs" />
+    <Compile Include="Common\WebParts\EnumPageWebParts.cs" />
+    <Compile Include="Common\WebParts\MoveWebPart.cs" />
+    <Compile Include="Common\WebParts\ReplaceWebPartContent.cs" />
+    <Compile Include="Common\WebParts\RetargetContentQueryWebPart.cs" />
+    <Compile Include="Common\WebParts\SetWebPartState.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="NativeMethods.cs" />
+    <Compile Include="Cmdlets\Quotas\SPCmdletGetQuotaTemplate.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Cmdlets\Quotas\SPCmdletNewQuotaTemplate.cs" />
+    <Compile Include="StsAdm\Audiences\AddAudienceRule.cs" />
+    <Compile Include="StsAdm\Audiences\CreateAudience.cs" />
+    <Compile Include="StsAdm\Audiences\DeleteAudience.cs" />
+    <Compile Include="StsAdm\Audiences\EnumAudienceRules.cs" />
+    <Compile Include="StsAdm\Audiences\ExportAudiences.cs" />
+    <Compile Include="StsAdm\Audiences\ImportAudiences.cs" />
+    <Compile Include="StsAdm\ContentDatabases\CreateContentDB.cs" />
+    <Compile Include="StsAdm\ContentDatabases\ManageContentDBSettings.cs" />
+    <Compile Include="StsAdm\ContentTypes\CopyContentTypes.cs" />
+    <Compile Include="StsAdm\ContentTypes\ExportContentTypes.cs" />
+    <Compile Include="StsAdm\ContentTypes\PropagateContentType.cs" />
+    <Compile Include="StsAdm\Farm\Backup2.cs" />
+    <Compile Include="StsAdm\Farm\BackupSites.cs" />
+    <Compile Include="StsAdm\Features\ActivateFeature.cs" />
+    <Compile Include="StsAdm\Features\DeactivateFeature.cs" />
+    <Compile Include="StsAdm\Features\EnumFeatures.cs" />
+    <Compile Include="Common\Features\FeatureHelper.cs" />
+    <Compile Include="StsAdm\Lists\CopyList.cs" />
+    <Compile Include="StsAdm\Lists\CopyListSecurity.cs" />
+    <Compile Include="StsAdm\Lists\DeleteList.cs" />
+    <Compile Include="StsAdm\Lists\ExportList.cs" />
+    <Compile Include="StsAdm\Lists\ExportListSecurity.cs" />
+    <Compile Include="StsAdm\Lists\ImportList.cs" />
+    <Compile Include="StsAdm\Lists\ImportListSecurity.cs" />
+    <Compile Include="StsAdm\Lists\ListAudienceTargeting.cs" />
+    <Compile Include="StsAdm\Lists\PublishItems.cs" />
+    <Compile Include="StsAdm\Logging\TraceLog.cs" />
+    <Compile Include="StsAdm\OperationHelpers\ExportHelper.cs" />
+    <Compile Include="StsAdm\OperationHelpers\ExtensionMethods.cs" />
+    <Compile Include="StsAdm\OperationHelpers\ImportHelper.cs" />
+    <Compile Include="StsAdm\OperationHelpers\SerializationHelper.cs" />
+    <Compile Include="Common\SPEnumerator.cs" />
+    <Compile Include="StsAdm\OperationHelpers\SPOperation.cs" />
+    <Compile Include="StsAdm\OperationHelpers\SPParam.cs" />
+    <Compile Include="StsAdm\OperationHelpers\SPParamCollection.cs" />
+    <Compile Include="StsAdm\Pages\CreatePublishingPage.cs" />
+    <Compile Include="StsAdm\Pages\EnumAvailablePageLayouts.cs" />
+    <Compile Include="StsAdm\Pages\EnumUnGhostedFiles.cs" />
+    <Compile Include="StsAdm\Pages\FixPublishingPagesPageLayoutUrl.cs" />
+    <Compile Include="StsAdm\Pages\ReGhostFile.cs" />
+    <Compile Include="StsAdm\Permissions\DisableUserPermissionForWebApp.cs" />
+    <Compile Include="StsAdm\Permissions\EnableUserPermissionForWebApp.cs" />
+    <Compile Include="StsAdm\Permissions\EnumEffectiveBasePerms.cs" />
+    <Compile Include="StsAdm\Permissions\SetSelfServiceSiteCreation.cs" />
+    <Compile Include="StsAdm\Quotas\CreateQuotaTemplate.cs" />
+    <Compile Include="StsAdm\Quotas\EditQuotaTemplate.cs" />
+    <Compile Include="StsAdm\Quotas\SyncQuotas.cs" />
+    <Compile Include="StsAdm\Security\AddUser2.cs" />
+    <Compile Include="StsAdm\Security\DeleteAllUsers.cs" />
+    <Compile Include="StsAdm\SiteCollections\AddAvailableSiteTemplate.cs" />
+    <Compile Include="StsAdm\SiteCollections\ConvertSubSiteToSiteCollection.cs" />
+    <Compile Include="StsAdm\SiteCollections\EnumAvailableSiteTemplates.cs" />
+    <Compile Include="StsAdm\SiteCollections\EnumInstalledSiteTemplates.cs" />
+    <Compile Include="StsAdm\SiteCollections\ExportNavigation.cs" />
+    <Compile Include="StsAdm\SiteCollections\RemoveAvailableSiteTemplate.cs" />
+    <Compile Include="StsAdm\SiteCollections\RepairSiteCollectionImportedFromSubSite.cs" />
+    <Compile Include="StsAdm\SiteCollections\ImportNavigation.cs" />
+    <None Include="StsAdm\SiteCollections\UpdateV2ToV3UpgradeAreaUrlMappings.cs" />
+    <Compile Include="StsAdm\SiteCollections\SetNavigationSettings.cs" />
+    <Compile Include="StsAdm\SPValidators\SPBinaryParameterValidator.cs" />
+    <Compile Include="StsAdm\SPValidators\SPDirectoryExistsAndValidFileNameValidator.cs" />
+    <Compile Include="StsAdm\SPValidators\SPDirectoryExistsValidator.cs" />
+    <Compile Include="StsAdm\SPValidators\SPEnableDisableValidator.cs" />
+    <Compile Include="StsAdm\SPValidators\SPEnumValidator.cs" />
+    <Compile Include="StsAdm\SPValidators\SPFileExistsValidator.cs" />
+    <Compile Include="StsAdm\SPValidators\SPGuidValidator.cs" />
+    <Compile Include="StsAdm\SPValidators\SPIntRangeValidator.cs" />
+    <Compile Include="StsAdm\SPValidators\SPLongRangeValidator.cs" />
+    <Compile Include="StsAdm\SPValidators\SPMultiParameterValidator.cs" />
+    <Compile Include="StsAdm\SPValidators\SPNonEmptyValidator.cs" />
+    <Compile Include="StsAdm\SPValidators\SPNullOrNonEmptyValidator.cs" />
+    <Compile Include="StsAdm\SPValidators\SPRegexValidator.cs" />
+    <Compile Include="StsAdm\SPValidators\SPTriParameterValidator.cs" />
+    <Compile Include="StsAdm\SPValidators\SPTrueFalseValidator.cs" />
+    <Compile Include="StsAdm\SPValidators\SPUrlValidator.cs" />
+    <Compile Include="StsAdm\SPValidators\SPUrlZoneParser.cs" />
+    <Compile Include="StsAdm\SPValidators\SPZoneUrlValidator.cs" />
+    <Compile Include="StsAdm\Themes\ApplyTheme.cs" />
+    <Compile Include="StsAdm\TimerJobs\ExecAdmSvcJobs.cs" />
+    <Compile Include="StsAdm\UserProfiles\SetPictureUrl.cs" />
+    <Compile Include="StsAdm\WebApplications\AddUserPolicyForWebApp.cs" />
+    <Compile Include="StsAdm\WebApplications\CreateWebApp.cs" />
+    <Compile Include="StsAdm\WebApplications\DeleteWebApp.cs" />
+    <Compile Include="StsAdm\WebApplications\ExtendWebApplication.cs" />
+    <Compile Include="StsAdm\WebApplications\SetBackConnectionHostNames.cs" />
+    <Compile Include="StsAdm\WebApplications\UnExtendWebApp.cs" />
+    <Compile Include="StsAdm\WebParts\AddListViewWebPart.cs" />
+    <Compile Include="StsAdm\WebParts\EnumPageWebParts.cs" />
+    <Compile Include="StsAdm\WebParts\MoveWebPart.cs" />
+    <Compile Include="StsAdm\WebParts\ReplaceWebPartContent.cs" />
+    <Compile Include="StsAdm\WebParts\RetargetContentQueryWebPart.cs" />
+    <Compile Include="StsAdm\WebParts\SetWebPartState.cs" />
+    <Compile Include="Utilities.cs" />
+    <Compile Include="Cmdlets\WebApplications\SPCmdletSetBackConnectionHostNames.cs" />
+    <Compile Include="Common\WebApplications\SetBackConnectionHostNamesTimerJob.cs" />
+    <Compile Include="Web References\WebPartPagesWebService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\WebPartPagesWebService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WebPartPagesWebService\WebPartPages.disco" />
+    <None Include="CONFIG\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{cc2c353b-9346-4697-bb38-24029855e135}</SharePointProjectItemId>
+    </None>
+    <None Include="GenerateHelp.ps1" />
+    <None Include="install.bat" />
+    <None Include="key.snk" />
+    <None Include="Package\Package.package">
+      <PackageId>{71e94915-4350-4b7e-be1d-a457b8fc8693}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="POWERSHELL\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{ee8c11f6-9167-4780-a2b3-965d427a2bd3}</SharePointProjectItemId>
+    </None>
+    <Content Include="POWERSHELL\Types\Lapointe.SharePoint.PowerShell.Cmdlets.Types.ps1xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Web References\WebPartPagesWebService\WebPartPages.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Features\" />
+    <Folder Include="ReferenceAssemblies\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="POWERSHELL\Format\Lapointe.SharePoint.PowerShell.Cmdlets.Format.ps1xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="CONFIG\stsadmcommands.server.lapointe.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="CONFIG\stsadmcommands.foundation.lapointe.xml" />
+    <Content Include="POWERSHELL\Help\Lapointe.SharePoint.PowerShell.dll-help.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="POWERSHELL\Registration\Lapointe.SharePoint.PowerShell.Cmdlets.xml">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://demo/_vti_bin/WebPartPages.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WebPartPagesWebService\</RelPath>
+      <UpdateFromURL>http://demo/_vti_bin/WebPartPages.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{BB1F664B-9266-4fd6-B973-E1E44974B511}">
+        <DeploymentConfigurations>
+          <DeploymentConfiguration Name="PowerShell">
+            <DeploymentSteps>Microsoft.VisualStudio.SharePoint.PreDeploymentCommand;Microsoft.VisualStudio.SharePoint.RetractSolution;Microsoft.VisualStudio.SharePoint.AddSolution;Microsoft.VisualStudio.SharePoint.PostDeploymentCommand</DeploymentSteps>
+            <RetractionSteps>Microsoft.VisualStudio.SharePoint.RetractSolution</RetractionSteps>
+          </DeploymentConfiguration>
+        </DeploymentConfigurations>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>C:\Windows\SysNative\WindowsPowerShell\v1.0\powershell.exe -version 2 "&amp; {$(ProjectDir)GenerateHelp.ps1 '$(TargetDir)'}"
+cd $(ProjectDir)
+"C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\gacutil.exe" /if "$(TargetPath)"
+Install.bat "$(TargetPath)" $(ConfigurationName)
+
+</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>"C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\gacutil.exe" /uf "$(TargetName)"</PreBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<commands>
+  <command
+	  name="gl-createquotatemplate"
+	  class="Lapointe.SharePoint.PowerShell.StsAdm.Quotas.CreateQuotaTemplate,$SharePoint.Project.AssemblyFullName$" />
+  <command
+	  name="gl-editquotatemplate"
+	  class="Lapointe.SharePoint.PowerShell.StsAdm.Quotas.EditQuotaTemplate,$SharePoint.Project.AssemblyFullName$" />
+  <command
+	  name="gl-exportlist"
+	  class="Lapointe.SharePoint.PowerShell.StsAdm.Lists.ExportList,$SharePoint.Project.AssemblyFullName$" />
+  <command
+	  name="gl-importlist"
+	  class="Lapointe.SharePoint.PowerShell.StsAdm.Lists.ImportList,$SharePoint.Project.AssemblyFullName$" />
+  <command
+	  name="gl-copylist"
+	  class="Lapointe.SharePoint.PowerShell.StsAdm.Lists.CopyList,$SharePoint.Project.AssemblyFullName$" />
+  <command
+	  name="gl-deletelist"
+	  class="Lapointe.SharePoint.PowerShell.StsAdm.Lists.DeleteList,$SharePoint.Project.AssemblyFullName$" />
+  <command
+	  name="gl-copylistsecurity"
+	  class="Lapointe.SharePoint.PowerShell.StsAdm.Lists.CopyListSecurity,$SharePoint.Project.AssemblyFullName$" />
+  <command
+	  name="gl-exportlistsecurity"
+	  class="Lapointe.SharePoint.PowerShell.StsAdm.Lists.ExportListSecurity,$SharePoint.Project.AssemblyFullName$" />
+  <command
+	  name="gl-importlistsecurity"
+	  class="Lapointe.SharePoint.PowerShell.StsAdm.Lists.ImportListSecurity,$SharePoint.Project.AssemblyFullName$" />
+  <command
+	  name="gl-setbackconnectionhostnames"
+	  class="Lapointe.SharePoint.PowerShell.StsAdm.WebApplications.SetBackConnectionHostNames,$SharePoint.Project.AssemblyFullName$" />
+  <command
+    name="gl-adduserpolicyforwebapp"
+    class="Lapointe.SharePoint.PowerShell.StsAdm.WebApplications.AddUserPolicyForWebApp,$SharePoint.Project.AssemblyFullName$" />
+  <command
+    name="gl-enumpagewebparts"
+    class="Lapointe.SharePoint.PowerShell.StsAdm.WebParts.EnumPageWebParts,$SharePoint.Project.AssemblyFullName$" />
+  <command
+    name="gl-execadmsvcjobs"
+    class="Lapointe.SharePoint.PowerShell.StsAdm.TimerJob.ExecAdmSvcJobs,$SharePoint.Project.AssemblyFullName$" />
+  <command
+    name="gl-enumfeatures"
+    class="Lapointe.SharePoint.PowerShell.StsAdm.Features.EnumFeatures,$SharePoint.Project.AssemblyFullName$" />
+  <command
+    name="gl-activatefeature"
+    class="Lapointe.SharePoint.PowerShell.StsAdm.Features.ActivateFeature,$SharePoint.Project.AssemblyFullName$" />
+  <command
+    name="gl-deactivatefeature"
+    class="Lapointe.SharePoint.PowerShell.StsAdm.Features.DeactivateFeature,$SharePoint.Project.AssemblyFullName$" />
+  <command
+    name="gl-publishitems"
+    class="Lapointe.SharePoint.PowerShell.StsAdm.Lists.PublishItems,$SharePoint.Project.AssemblyFullName$" />
+  <command
+    name="gl-replacewebpartcontent"
+    class="Lapointe.SharePoint.PowerShell.StsAdm.WebParts.ReplaceWebPartContent,$SharePoint.Project.AssemblyFullName$" />
+  <command
+    name="gl-copycontenttypes"
+    class="Lapointe.SharePoint.PowerShell.StsAdm.ContentTypes.CopyContentTypes,$SharePoint.Project.AssemblyFullName$" />
+  <command
+    name="gl-repairsitecollectionimportedfromsubsite"
+    class="Lapointe.SharePoint.PowerShell.StsAdm.SiteCollections.RepairSiteCollectionImportedFromSubSite,$SharePoint.Project.AssemblyFullName$" />
+  <command
+    name="gl-convertsubsitetositecollection"
+    class="Lapointe.SharePoint.PowerShell.StsAdm.SiteCollections.ConvertSubSiteToSiteCollection,$SharePoint.Project.AssemblyFullName$" />
+  <command
+    name="gl-exportcontenttypes"
+    class="Lapointe.SharePoint.PowerShell.StsAdm.ContentTypes.ExportContentTypes,$SharePoint.Project.AssemblyFullName$" />
+  <command
+    name="gl-propagatecontenttype"
+    class="Lapointe.SharePoint.PowerShell.StsAdm.ContentTypes.PropagateContentType,$SharePoint.Project.AssemblyFullName$" />
+  <command
+    name="gl-backupsites"
+    class="Lapointe.SharePoint.PowerShell.StsAdm.Farm.BackupSites,$SharePoint.Project.AssemblyFullName$" />
+  <command
+    name="gl-createcontentdb"
+    class="Lapointe.SharePoint.PowerShell.StsAdm.ContentDatabases.CreateContentDB,$SharePoint.Project.AssemblyFullName$" />
+  <command
+    name="gl-managecontentdbsettings"
+    class="Lapointe.SharePoint.PowerShell.StsAdm.ContentDatabases.ManageContentDBSettings,$SharePoint.Project.AssemblyFullName$" />
+  <command
+	  name="gl-backup"
+	  class="Lapointe.SharePoint.PowerShell.StsAdm.Farm.Backup2,$SharePoint.Project.AssemblyFullName$" />
+  <command
+	  name="gl-tracelog"
+	  class="Lapointe.SharePoint.PowerShell.StsAdm.Logging.TraceLog,$SharePoint.Project.AssemblyFullName$" />
+  <command
+	  name="gl-enumunghostedfiles"
+	  class="Lapointe.SharePoint.PowerShell.StsAdm.Pages.EnumUnGhostedFiles,$SharePoint.Project.AssemblyFullName$" />
+  <command
+	  name="gl-reghostfile"
+	  class="Lapointe.SharePoint.PowerShell.StsAdm.Pages.ReGhostFile,$SharePoint.Project.AssemblyFullName$" />
+  <command
+    name="gl-createwebapp"
+    class="Lapointe.SharePoint.PowerShell.StsAdm.WebApplications.CreateWebApp,$SharePoint.Project.AssemblyFullName$" />
+  <command
+	  name="gl-deletewebapp"
+	  class="Lapointe.SharePoint.PowerShell.StsAdm.WebApplications.DeleteWebApp,$SharePoint.Project.AssemblyFullName$" />
+  <command
+	  name="gl-extendwebapp"
+	  class="Lapointe.SharePoint.PowerShell.StsAdm.WebApplications.ExtendWebApplication,$SharePoint.Project.AssemblyFullName$" />
+  <command
+	  name="gl-unextendwebapp"
+	  class="Lapointe.SharePoint.PowerShell.StsAdm.WebApplications.UnExtendWebApp,$SharePoint.Project.AssemblyFullName$" />
+  <command
+	  name="gl-disableuserpermissionforwebapp"
+	  class="Lapointe.SharePoint.PowerShell.StsAdm.Permissions.DisableUserPermissionForWebApp,$SharePoint.Project.AssemblyFullName$" />
+  <command
+	  name="gl-enableuserpermissionforwebapp"
+	  class="Lapointe.SharePoint.PowerShell.StsAdm.Permissions.EnableUserPermissionForWebApp,$SharePoint.Project.AssemblyFullName$" />
+  <command
+	  name="gl-setselfservicesitecreation"
+	  class="Lapointe.SharePoint.PowerShell.StsAdm.Permissions.SetSelfServiceSiteCreation,$SharePoint.Project.AssemblyFullName$" />
+  <command
+	  name="gl-enumeffectivebaseperms"
+	  class="Lapointe.SharePoint.PowerShell.StsAdm.Permissions.EnumEffectiveBasePerms,$SharePoint.Project.AssemblyFullName$" />
+  <command
+	  name="gl-adduser2"
+	  class="Lapointe.SharePoint.PowerShell.StsAdm.Security.AddUser2,$SharePoint.Project.AssemblyFullName$" />
+  <command
+	  name="gl-deleteallusers"
+	  class="Lapointe.SharePoint.PowerShell.StsAdm.Security.DeleteAllUsers,$SharePoint.Project.AssemblyFullName$" />
+  <command
+	  name="gl-applytheme"
+	  class="Lapointe.SharePoint.PowerShell.StsAdm.Themes.ApplyTheme,$SharePoint.Project.AssemblyFullName$" />
+  <command
+	  name="gl-enuminstalledsitetemplates"
+	  class="Lapointe.SharePoint.PowerShell.StsAdm.SiteCollections.EnumInstalledSiteTemplates,$SharePoint.Project.AssemblyFullName$" />
+  <command
+	  name="gl-enumavailablesitetemplates"
+	  class="Lapointe.SharePoint.PowerShell.StsAdm.SiteCollections.EnumAvailableSiteTemplates,$SharePoint.Project.AssemblyFullName$" />
+  <command
+	  name="gl-addavailablesitetemplate"
+	  class="Lapointe.SharePoint.PowerShell.StsAdm.SiteCollections.AddAvailableSiteTemplate,$SharePoint.Project.AssemblyFullName$" />
+  <command
+	  name="gl-removeavailablesitetemplate"
+	  class="Lapointe.SharePoint.PowerShell.StsAdm.SiteCollections.RemoveAvailableSiteTemplate,$SharePoint.Project.AssemblyFullName$" />
+  <command
+	  name="gl-syncquotas"
+	  class="Lapointe.SharePoint.PowerShell.StsAdm.Quotas.SyncQuotas,$SharePoint.Project.AssemblyFullName$" />
+  <command
+	  name="gl-addlistviewwebpart"
+	  class="Lapointe.SharePoint.PowerShell.StsAdm.WebParts.AddListViewWebPart,$SharePoint.Project.AssemblyFullName$" />
+  <command
+	  name="gl-movewebpart"
+	  class="Lapointe.SharePoint.PowerShell.StsAdm.WebParts.MoveWebPart,$SharePoint.Project.AssemblyFullName$" />
+  <command
+	  name="gl-setwebpartstate"
+	  class="Lapointe.SharePoint.PowerShell.StsAdm.WebParts.SetWebPartState,$SharePoint.Project.AssemblyFullName$" />
+  <command
+	  name="gl-setnavigationsettings"
+	  class="Lapointe.SharePoint.PowerShell.StsAdm.SiteCollections.SetNavigationSettings,$SharePoint.Project.AssemblyFullName$" />
+  <command
+	  name="gl-moveweb"
+	  class="Lapointe.SharePoint.PowerShell.StsAdm.SiteCollections.MoveWeb,$SharePoint.Project.AssemblyFullName$" />
+  <command
+	  name="gl-replacefieldvalues"
+	  class="Lapointe.SharePoint.PowerShell.StsAdm.Lists.ReplaceFieldValues,$SharePoint.Project.AssemblyFullName$" />
+  <command
+	  name="gl-addeventreceiver"
+	  class="Lapointe.SharePoint.PowerShell.StsAdm.Lists.AddEventReceiver,$SharePoint.Project.AssemblyFullName$" />
+  <command
+	  name="gl-addlist"
+	  class="Lapointe.SharePoint.PowerShell.StsAdm.Lists.AddList,$SharePoint.Project.AssemblyFullName$" />
+  <command
+	  name="gl-deletelistfield"
+	  class="Lapointe.SharePoint.PowerShell.StsAdm.Lists.DeleteListField,$SharePoint.Project.AssemblyFullName$" />
+
+  <!--<command
+    name="gl-test" 
+    class="Lapointe.SharePoint.PowerShell.StsAdm.Test,$SharePoint.Project.AssemblyFullName$" />-->
+</commands>

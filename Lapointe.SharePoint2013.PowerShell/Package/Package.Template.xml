@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="71e94915-4350-4b7e-be1d-a457b8fc8693" SharePointProductVersion="15.0">
+  <Assemblies>
+    <Assembly Location="Lapointe.PowerShell.MamlGenerator.dll" DeploymentTarget="GlobalAssemblyCache" />
+    <Assembly Location="Lapointe.SharePoint.PowerShell.dll" DeploymentTarget="GlobalAssemblyCache" />
+  </Assemblies>
+  <RootFiles>
+    <RootFile Location="CONFIG\POWERSHELL\Format\Lapointe.SharePoint.PowerShell.Cmdlets.Format.ps1xml" />
+    <RootFile Location="CONFIG\POWERSHELL\Types\Lapointe.SharePoint.PowerShell.Cmdlets.Types.ps1xml" />
+    <RootFile Location="CONFIG\POWERSHELL\Help\Lapointe.SharePoint.PowerShell.dll-help.xml" />
+    <RootFile Location="CONFIG\POWERSHELL\Registration\Lapointe.SharePoint.PowerShell.Cmdlets.xml" />
+    <RootFile Location="CONFIG\stsadmcommands.foundation.lapointe.xml" />
+    <RootFile Location="CONFIG\stsadmcommands.server.lapointe.xml" />
+  </RootFiles>
+</Solution>

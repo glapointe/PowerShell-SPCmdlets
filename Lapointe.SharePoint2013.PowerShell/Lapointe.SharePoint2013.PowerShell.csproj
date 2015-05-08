@@ -1,0 +1,1096 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{229309DE-DB5E-4824-98AD-DE321A30388C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Lapointe.SharePoint.PowerShell</RootNamespace>
+    <AssemblyName>Lapointe.SharePoint.PowerShell</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\Lapointe.SharePoint2010.PowerShell\key.snk</AssemblyOriginatorKeyFile>
+    <ActiveDeploymentConfiguration>PowerShell</ActiveDeploymentConfiguration>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <ProjectMode>SharePointCustomization</ProjectMode>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'DebugMOSS|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;MOSS,SP2013</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ReleaseMOSS|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;MOSS,SP2013</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'DebugFoundation|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug Foundation\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;SP2013</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\Lapointe.SharePoint.PowerShell.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisInputAssembly>bin\Debug Foundation\Lapointe.SharePoint.PowerShell.dll</CodeAnalysisInputAssembly>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ReleaseFoundation|AnyCPU' ">
+    <OutputPath>bin\Release Foundation\</OutputPath>
+    <DefineConstants>TRACE;SP2013</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\Lapointe.SharePoint.PowerShell.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisInputAssembly>bin\Release Foundation\Lapointe.SharePoint.PowerShell.dll</CodeAnalysisInputAssembly>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Lapointe.PowerShell.MamlGenerator, Version=1.0.0.0, Culture=neutral, PublicKeyToken=313d176eae804710, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ReferenceAssemblies\Lapointe.PowerShell.MamlGenerator.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.BusinessData, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ReferenceAssemblies\Microsoft.BusinessData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Policy, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ReferenceAssemblies\Microsoft.Office.Policy.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Server, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ReferenceAssemblies\Microsoft.Office.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Server.Search, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ReferenceAssemblies\Microsoft.Office.Server.Search.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Server.Search.Connector, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ReferenceAssemblies\Microsoft.Office.Server.Search.Connector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Server.UserProfiles, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ReferenceAssemblies\Microsoft.Office.Server.UserProfiles.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Word.Server, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ReferenceAssemblies\Microsoft.Office.Word.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ReferenceAssemblies\Microsoft.SharePoint.dll</HintPath>
+    </Reference>
+    <Reference Include="microsoft.sharepoint.portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ReferenceAssemblies\microsoft.sharepoint.portal.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Powershell">
+      <HintPath>ReferenceAssemblies\Microsoft.SharePoint.Powershell.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ReferenceAssemblies\Microsoft.SharePoint.Publishing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Search, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ReferenceAssemblies\Microsoft.SharePoint.Search.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Security, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ReferenceAssemblies\Microsoft.SharePoint.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Taxonomy, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ReferenceAssemblies\Microsoft.SharePoint.Taxonomy.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.WorkflowActions, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Management.Automation" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Audiences\SPCmdletExportAudienceRules.cs">
+      <Link>Cmdlets\Audiences\SPCmdletExportAudienceRules.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Audiences\SPCmdletExportAudiences.cs">
+      <Link>Cmdlets\Audiences\SPCmdletExportAudiences.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Audiences\SPCmdletGetAudience.cs">
+      <Link>Cmdlets\Audiences\SPCmdletGetAudience.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Audiences\SPCmdletGetAudienceManager.cs">
+      <Link>Cmdlets\Audiences\SPCmdletGetAudienceManager.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Audiences\SPCmdletImportAudiences.cs">
+      <Link>Cmdlets\Audiences\SPCmdletImportAudiences.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Audiences\SPCmdletNewAudience.cs">
+      <Link>Cmdlets\Audiences\SPCmdletNewAudience.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Audiences\SPCmdletNewAudienceRule.cs">
+      <Link>Cmdlets\Audiences\SPCmdletNewAudienceRule.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Audiences\SPCmdletRemoveAudience.cs">
+      <Link>Cmdlets\Audiences\SPCmdletRemoveAudience.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Audiences\SPCmdletSetAudience.cs">
+      <Link>Cmdlets\Audiences\SPCmdletSetAudience.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\ContentTypes\SPCmdletCopyContentType.cs">
+      <Link>Cmdlets\ContentTypes\SPCmdletCopyContentType.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\ContentTypes\SPCmdletExportContentType.cs">
+      <Link>Cmdlets\ContentTypes\SPCmdletExportContentType.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\ContentTypes\SPCmdletGetContentType.cs">
+      <Link>Cmdlets\ContentTypes\SPCmdletGetContentType.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\ContentTypes\SPCmdletGetContentTypeUsage.cs">
+      <Link>Cmdlets\ContentTypes\SPCmdletGetContentTypeUsage.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\ContentTypes\SPCmdletPropagateContentType.cs">
+      <Link>Cmdlets\ContentTypes\SPCmdletPropagateContentType.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Farm\SPCmdletBackupSites.cs">
+      <Link>Cmdlets\Farm\SPCmdletBackupSites.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Farm\SPCmdletGetDeveloperDashboard.cs">
+      <Link>Cmdlets\Farm\SPCmdletGetDeveloperDashboard.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Farm\SPCmdletSetDeveloperDashboard.cs">
+      <Link>Cmdlets\Farm\SPCmdletSetDeveloperDashboard.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Features\SPCmdletDisableFeature.cs">
+      <Link>Cmdlets\Features\SPCmdletDisableFeature.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Features\SPCmdletEnableFeature.cs">
+      <Link>Cmdlets\Features\SPCmdletEnableFeature.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Features\SPCmdletGetFeatureActivations.cs">
+      <Link>Cmdlets\Features\SPCmdletGetFeatureActivations.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Groups\SPCmdletAddGroupPermission.cs">
+      <Link>Cmdlets\Groups\SPCmdletAddGroupPermission.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Groups\SPCmdletGetGroup.cs">
+      <Link>Cmdlets\Groups\SPCmdletGetGroup.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Groups\SPCmdletNewGroup.cs">
+      <Link>Cmdlets\Groups\SPCmdletNewGroup.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Groups\SPCmdletRemoveGroup.cs">
+      <Link>Cmdlets\Groups\SPCmdletRemoveGroup.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Groups\SPCmdletRemoveGroupPermission.cs">
+      <Link>Cmdlets\Groups\SPCmdletRemoveGroupPermission.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Lists\SPCmdletAddEventReceiver.cs">
+      <Link>Cmdlets\Lists\SPCmdletAddEventReceiver.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Lists\SPCmdletCopyList.cs">
+      <Link>Cmdlets\Lists\SPCmdletCopyList.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Lists\SPCmdletCopyListSecurity.cs">
+      <Link>Cmdlets\Lists\SPCmdletCopyListSecurity.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Lists\SPCmdletDeleteList.cs">
+      <Link>Cmdlets\Lists\SPCmdletDeleteList.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Lists\SPCmdletExport.cs">
+      <Link>Cmdlets\Lists\SPCmdletExport.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Lists\SPCmdletExportImport.cs">
+      <Link>Cmdlets\Lists\SPCmdletExportImport.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Lists\SPCmdletExportListSecurity.cs">
+      <Link>Cmdlets\Lists\SPCmdletExportListSecurity.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Lists\SPCmdletExportWeb2.cs">
+      <Link>Cmdlets\Lists\SPCmdletExportWeb2.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Lists\SPCmdletGetCheckedOutFiles.cs">
+      <Link>Cmdlets\Lists\SPCmdletGetCheckedOutFiles.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Lists\SPCmdletGetFile.cs">
+      <Link>Cmdlets\Lists\SPCmdletGetFile.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Lists\SPCmdletGetList.cs">
+      <Link>Cmdlets\Lists\SPCmdletGetList.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Lists\SPCmdletGetListOverlays.cs">
+      <Link>Cmdlets\Lists\SPCmdletGetListOverlays.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Lists\SPCmdletImportListSecurity.cs">
+      <Link>Cmdlets\Lists\SPCmdletImportListSecurity.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Lists\SPCmdletImportWeb2.cs">
+      <Link>Cmdlets\Lists\SPCmdletImportWeb2.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Lists\SPCmdletNewFile.cs">
+      <Link>Cmdlets\Lists\SPCmdletNewFile.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Lists\SPCmdletNewFolder.cs">
+      <Link>Cmdlets\Lists\SPCmdletNewFolder.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Lists\SPCmdletNewList.cs">
+      <Link>Cmdlets\Lists\SPCmdletNewList.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Lists\SPCmdletPublishListItems.cs">
+      <Link>Cmdlets\Lists\SPCmdletPublishListItems.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Lists\SPCmdletRemoveField.cs">
+      <Link>Cmdlets\Lists\SPCmdletRemoveField.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Lists\SPCmdletReplaceListContent.cs">
+      <Link>Cmdlets\Lists\SPCmdletReplaceListContent.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Lists\SPCmdletSetListAudienceTargeting.cs">
+      <Link>Cmdlets\Lists\SPCmdletSetListAudienceTargeting.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Lists\SPCmdletSetListOverlay.cs">
+      <Link>Cmdlets\Lists\SPCmdletSetListOverlay.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\ManagedMetadata\SPCmdletExportTerms.cs">
+      <Link>Cmdlets\ManagedMetadata\SPCmdletExportTerms.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\ManagedMetadata\SPCmdletImportTerms.cs">
+      <Link>Cmdlets\ManagedMetadata\SPCmdletImportTerms.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Pages\SPCmdletAddWikiPageHtml.cs">
+      <Link>Cmdlets\Pages\SPCmdletAddWikiPageHtml.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Pages\SPCmdletGetCustomizedPages.cs">
+      <Link>Cmdlets\Pages\SPCmdletGetCustomizedPages.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Pages\SPCmdletGetPublishingPage.cs">
+      <Link>Cmdlets\Pages\SPCmdletGetPublishingPage.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Pages\SPCmdletGetPublishingPageLayout.cs">
+      <Link>Cmdlets\Pages\SPCmdletGetPublishingPageLayout.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Pages\SPCmdletNewPublishingPage.cs">
+      <Link>Cmdlets\Pages\SPCmdletNewPublishingPage.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Pages\SPCmdletNewWikiPage.cs">
+      <Link>Cmdlets\Pages\SPCmdletNewWikiPage.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Pages\SPCmdletRepairPageLayoutUrl.cs">
+      <Link>Cmdlets\Pages\SPCmdletRepairPageLayoutUrl.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Pages\SPCmdletResetCustomizedPages.cs">
+      <Link>Cmdlets\Pages\SPCmdletResetCustomizedPages.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Pages\SPCmdletSetWikiPageLayout.cs">
+      <Link>Cmdlets\Pages\SPCmdletSetWikiPageLayout.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\PipeBindObjects\PropertiesPipeBind.cs">
+      <Link>Cmdlets\PipeBindObjects\PropertiesPipeBind.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\PipeBindObjects\SPContentTypePipeBind.cs">
+      <Link>Cmdlets\PipeBindObjects\SPContentTypePipeBind.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\PipeBindObjects\SPFilePipeBind.cs">
+      <Link>Cmdlets\PipeBindObjects\SPFilePipeBind.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\PipeBindObjects\SPFolderPipeBind.cs">
+      <Link>Cmdlets\PipeBindObjects\SPFolderPipeBind.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\PipeBindObjects\SPGroupPipeBind.cs">
+      <Link>Cmdlets\PipeBindObjects\SPGroupPipeBind.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\PipeBindObjects\SPLimitedWebPartManagerPipeBind.cs">
+      <Link>Cmdlets\PipeBindObjects\SPLimitedWebPartManagerPipeBind.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\PipeBindObjects\SPListItemPipeBind.cs">
+      <Link>Cmdlets\PipeBindObjects\SPListItemPipeBind.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\PipeBindObjects\SPListPipeBind.cs">
+      <Link>Cmdlets\PipeBindObjects\SPListPipeBind.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\PipeBindObjects\SPPageLayoutPipeBind.cs">
+      <Link>Cmdlets\PipeBindObjects\SPPageLayoutPipeBind.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\PipeBindObjects\SPTaxonomyGroupPipeBind.cs">
+      <Link>Cmdlets\PipeBindObjects\SPTaxonomyGroupPipeBind.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\PipeBindObjects\SPTaxonomySessionPipeBind.cs">
+      <Link>Cmdlets\PipeBindObjects\SPTaxonomySessionPipeBind.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\PipeBindObjects\SPTaxonomyTermPipeBind.cs">
+      <Link>Cmdlets\PipeBindObjects\SPTaxonomyTermPipeBind.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\PipeBindObjects\SPTaxonomyTermSetPipeBind.cs">
+      <Link>Cmdlets\PipeBindObjects\SPTaxonomyTermSetPipeBind.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\PipeBindObjects\SPTaxonomyTermStorePipeBind.cs">
+      <Link>Cmdlets\PipeBindObjects\SPTaxonomyTermStorePipeBind.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\PipeBindObjects\SPWordConversionJobPipeBind.cs">
+      <Link>Cmdlets\PipeBindObjects\SPWordConversionJobPipeBind.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\PipeBindObjects\SPWordServiceApplicationPipeBind.cs">
+      <Link>Cmdlets\PipeBindObjects\SPWordServiceApplicationPipeBind.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\PipeBindObjects\TypePipeBind.cs">
+      <Link>Cmdlets\PipeBindObjects\TypePipeBind.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\PipeBindObjects\XmlDocumentPipeBind.cs">
+      <Link>Cmdlets\PipeBindObjects\XmlDocumentPipeBind.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Quotas\SPCmdletGetQuotaTemplate.cs">
+      <Link>Cmdlets\Quotas\SPCmdletGetQuotaTemplate.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Quotas\SPCmdletNewQuotaTemplate.cs">
+      <Link>Cmdlets\Quotas\SPCmdletNewQuotaTemplate.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Quotas\SPCmdletSetQuota.cs">
+      <Link>Cmdlets\Quotas\SPCmdletSetQuota.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Quotas\SPCmdletSetQuotaTemplate.cs">
+      <Link>Cmdlets\Quotas\SPCmdletSetQuotaTemplate.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\SiteCollections\SPCmdletClearHttpContext.cs">
+      <Link>Cmdlets\SiteCollections\SPCmdletClearHttpContext.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\SiteCollections\SPCmdletConvertToSite.cs">
+      <Link>Cmdlets\SiteCollections\SPCmdletConvertToSite.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\SiteCollections\SPCmdletExportNavigation.cs">
+      <Link>Cmdlets\SiteCollections\SPCmdletExportNavigation.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\SiteCollections\SPCmdletGetAvailableWebTemplates.cs">
+      <Link>Cmdlets\SiteCollections\SPCmdletGetAvailableWebTemplates.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\SiteCollections\SPCmdletImportNavigation.cs">
+      <Link>Cmdlets\SiteCollections\SPCmdletImportNavigation.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\SiteCollections\SPCmdletMoveWeb.cs">
+      <Link>Cmdlets\SiteCollections\SPCmdletMoveWeb.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\SiteCollections\SPCmdletRepairSite.cs">
+      <Link>Cmdlets\SiteCollections\SPCmdletRepairSite.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\SiteCollections\SPCmdletSetHttpContext.cs">
+      <Link>Cmdlets\SiteCollections\SPCmdletSetHttpContext.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\SPCmdletCustom.cs">
+      <Link>Cmdlets\SPCmdletCustom.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\SPGetCmdletBaseCustom.cs">
+      <Link>Cmdlets\SPGetCmdletBaseCustom.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\SPNewCmdletBaseCustom.cs">
+      <Link>Cmdlets\SPNewCmdletBaseCustom.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\SPRemoveCmdletBaseCustom.cs">
+      <Link>Cmdlets\SPRemoveCmdletBaseCustom.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\SPSetCmdletBaseCustom.cs">
+      <Link>Cmdlets\SPSetCmdletBaseCustom.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\SPValidators\ValidateDirectoryExistsAndValidFileNameAttribute.cs">
+      <Link>Cmdlets\SPValidators\ValidateDirectoryExistsAndValidFileNameAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\SPValidators\ValidateDirectoryExistsAttribute.cs">
+      <Link>Cmdlets\SPValidators\ValidateDirectoryExistsAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\SPValidators\ValidateFileExistsAttribute.cs">
+      <Link>Cmdlets\SPValidators\ValidateFileExistsAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Themes\SPCmdletResetTheme.cs">
+      <Link>Cmdlets\Themes\SPCmdletResetTheme.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\TimerJobs\SPCmdletGetRunningTimerJobs.cs">
+      <Link>Cmdlets\TimerJobs\SPCmdletGetRunningTimerJobs.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\TimerJobs\SPCmdletStartAdminJob.cs">
+      <Link>Cmdlets\TimerJobs\SPCmdletStartAdminJob.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\UserProfiles\SPCmdletGetUserProfileChanges.cs">
+      <Link>Cmdlets\UserProfiles\SPCmdletGetUserProfileChanges.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\UserProfiles\SPCmdletSetProfilePictureUrl.cs">
+      <Link>Cmdlets\UserProfiles\SPCmdletSetProfilePictureUrl.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Users\SPCmdletRemoveAllUsers.cs">
+      <Link>Cmdlets\Users\SPCmdletRemoveAllUsers.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\WebApplications\SPCmdletAddWebApplicationUserPolicy.cs">
+      <Link>Cmdlets\WebApplications\SPCmdletAddWebApplicationUserPolicy.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\WebApplications\SPCmdletSetBackConnectionHostNames.cs">
+      <Link>Cmdlets\WebApplications\SPCmdletSetBackConnectionHostNames.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\WebParts\SPCmdletAddListViewWebPart.cs">
+      <Link>Cmdlets\WebParts\SPCmdletAddListViewWebPart.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\WebParts\SPCmdletCopyWebPart.cs">
+      <Link>Cmdlets\WebParts\SPCmdletCopyWebPart.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\WebParts\SPCmdletGetLimitedWebPartManager.cs">
+      <Link>Cmdlets\WebParts\SPCmdletGetLimitedWebPartManager.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\WebParts\SPCmdletGetWebPartList.cs">
+      <Link>Cmdlets\WebParts\SPCmdletGetWebPartList.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\WebParts\SPCmdletImportWebPart.cs">
+      <Link>Cmdlets\WebParts\SPCmdletImportWebPart.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\WebParts\SPCmdletMoveWebPart.cs">
+      <Link>Cmdlets\WebParts\SPCmdletMoveWebPart.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\WebParts\SPCmdletReplaceWebPartContent.cs">
+      <Link>Cmdlets\WebParts\SPCmdletReplaceWebPartContent.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\WebParts\SPCmdletReplaceWebPartType.cs">
+      <Link>Cmdlets\WebParts\SPCmdletReplaceWebPartType.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\WebParts\SPCmdletSetContentQueryWebPartTarget.cs">
+      <Link>Cmdlets\WebParts\SPCmdletSetContentQueryWebPartTarget.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\WebParts\SPCmdletSetWebPart.cs">
+      <Link>Cmdlets\WebParts\SPCmdletSetWebPart.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\WordAutomation\SPCmdletGetWordConversionJobStatus.cs">
+      <Link>Cmdlets\WordAutomation\SPCmdletGetWordConversionJobStatus.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\WordAutomation\SPCmdletNewWordConversionJob.cs">
+      <Link>Cmdlets\WordAutomation\SPCmdletNewWordConversionJob.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Common\Audiences\AddAudienceRule.cs">
+      <Link>Common\Audiences\AddAudienceRule.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Common\Audiences\CreateAudience.cs">
+      <Link>Common\Audiences\CreateAudience.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Common\Audiences\DeleteAudience.cs">
+      <Link>Common\Audiences\DeleteAudience.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Common\Audiences\EnumAudienceRules.cs">
+      <Link>Common\Audiences\EnumAudienceRules.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Common\Audiences\ExportAudiences.cs">
+      <Link>Common\Audiences\ExportAudiences.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Common\Audiences\ImportAudiences.cs">
+      <Link>Common\Audiences\ImportAudiences.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Common\ContentTypes\CopyContentTypes.cs">
+      <Link>Common\ContentTypes\CopyContentTypes.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Common\ContentTypes\ExportContentTypes.cs">
+      <Link>Common\ContentTypes\ExportContentTypes.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Common\ContentTypes\PropagateContentType.cs">
+      <Link>Common\ContentTypes\PropagateContentType.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Common\Farm\BackupSites.cs">
+      <Link>Common\Farm\BackupSites.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Common\Features\FeatureHelper.cs">
+      <Link>Common\Features\FeatureHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Common\Lists\AddEventReceiver.cs">
+      <Link>Common\Lists\AddEventReceiver.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Common\Lists\AddList.cs">
+      <Link>Common\Lists\AddList.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Common\Lists\CopyListSecurity.cs">
+      <Link>Common\Lists\CopyListSecurity.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Common\Lists\DeleteList.cs">
+      <Link>Common\Lists\DeleteList.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Common\Lists\ExportList.cs">
+      <Link>Common\Lists\ExportList.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Common\Lists\ExportListSecurity.cs">
+      <Link>Common\Lists\ExportListSecurity.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Common\Lists\GetListOverlays.cs">
+      <Link>Common\Lists\GetListOverlays.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Common\Lists\ImportList.cs">
+      <Link>Common\Lists\ImportList.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Common\Lists\ImportListSecurity.cs">
+      <Link>Common\Lists\ImportListSecurity.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Common\Lists\ListAudienceTargeting.cs">
+      <Link>Common\Lists\ListAudienceTargeting.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Common\Lists\PublishItems.cs">
+      <Link>Common\Lists\PublishItems.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Common\Lists\ReplaceFieldValues.cs">
+      <Link>Common\Lists\ReplaceFieldValues.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Common\Lists\SetListOverlay.cs">
+      <Link>Common\Lists\SetListOverlay.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Common\ManagedMetadata\ExportTerms.cs">
+      <Link>Common\ManagedMetadata\ExportTerms.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Common\ManagedMetadata\ImportTerms.cs">
+      <Link>Common\ManagedMetadata\ImportTerms.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Common\Pages\CreatePublishingPage.cs">
+      <Link>Common\Pages\CreatePublishingPage.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Common\Pages\EnumUnGhostedFiles.cs">
+      <Link>Common\Pages\EnumUnGhostedFiles.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Common\Pages\FixPublishingPagesPageLayoutUrl.cs">
+      <Link>Common\Pages\FixPublishingPagesPageLayoutUrl.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Common\Pages\ReGhostFile.cs">
+      <Link>Common\Pages\ReGhostFile.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Common\Pages\WikiPageUtilities.cs">
+      <Link>Common\Pages\WikiPageUtilities.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Common\SiteCollections\ConvertSubSiteToSiteCollection.cs">
+      <Link>Common\SiteCollections\ConvertSubSiteToSiteCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Common\SiteCollections\ExportNavigation.cs">
+      <Link>Common\SiteCollections\ExportNavigation.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Common\SiteCollections\ImportNavigation.cs">
+      <Link>Common\SiteCollections\ImportNavigation.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Common\SiteCollections\MoveWeb.cs">
+      <Link>Common\SiteCollections\MoveWeb.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Common\SiteCollections\RepairSiteCollectionImportedFromSubSite.cs">
+      <Link>Common\SiteCollections\RepairSiteCollectionImportedFromSubSite.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Common\SPEnumerator.cs">
+      <Link>Common\SPEnumerator.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Common\TimerJobs\ExecAdmSvcJobs.cs">
+      <Link>Common\TimerJobs\ExecAdmSvcJobs.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Common\UserProfiles\SetPictureUrl.cs">
+      <Link>Common\UserProfiles\SetPictureUrl.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Common\WebApplications\AddUserPolicyForWebApp.cs">
+      <Link>Common\WebApplications\AddUserPolicyForWebApp.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Common\WebApplications\SetBackConnectionHostNames.cs">
+      <Link>Common\WebApplications\SetBackConnectionHostNames.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Common\WebApplications\SetBackConnectionHostNamesTimerJob.cs">
+      <Link>Common\WebApplications\SetBackConnectionHostNamesTimerJob.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Common\WebParts\AddListViewWebPart.cs">
+      <Link>Common\WebParts\AddListViewWebPart.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Common\WebParts\EnumPageWebParts.cs">
+      <Link>Common\WebParts\EnumPageWebParts.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Common\WebParts\MoveWebPart.cs">
+      <Link>Common\WebParts\MoveWebPart.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Common\WebParts\ReplaceWebPartContent.cs">
+      <Link>Common\WebParts\ReplaceWebPartContent.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Common\WebParts\RetargetContentQueryWebPart.cs">
+      <Link>Common\WebParts\RetargetContentQueryWebPart.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Common\WebParts\SetWebPartState.cs">
+      <Link>Common\WebParts\SetWebPartState.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Enums\WikiPageLayout.cs">
+      <Link>Enums\WikiPageLayout.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Logger.cs">
+      <Link>Logger.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\NativeMethods.cs">
+      <Link>NativeMethods.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Properties\AssemblyInfo.cs">
+      <Link>Properties\AssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\Audiences\AddAudienceRule.cs">
+      <Link>StsAdm\Audiences\AddAudienceRule.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\Audiences\CreateAudience.cs">
+      <Link>StsAdm\Audiences\CreateAudience.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\Audiences\DeleteAudience.cs">
+      <Link>StsAdm\Audiences\DeleteAudience.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\Audiences\EnumAudienceRules.cs">
+      <Link>StsAdm\Audiences\EnumAudienceRules.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\Audiences\ExportAudiences.cs">
+      <Link>StsAdm\Audiences\ExportAudiences.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\Audiences\ImportAudiences.cs">
+      <Link>StsAdm\Audiences\ImportAudiences.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\ContentDatabases\CreateContentDB.cs">
+      <Link>StsAdm\ContentDatabases\CreateContentDB.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\ContentDatabases\ManageContentDBSettings.cs">
+      <Link>StsAdm\ContentDatabases\ManageContentDBSettings.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\ContentTypes\CopyContentTypes.cs">
+      <Link>StsAdm\ContentTypes\CopyContentTypes.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\ContentTypes\ExportContentTypes.cs">
+      <Link>StsAdm\ContentTypes\ExportContentTypes.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\ContentTypes\PropagateContentType.cs">
+      <Link>StsAdm\ContentTypes\PropagateContentType.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\Farm\Backup2.cs">
+      <Link>StsAdm\Farm\Backup2.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\Farm\BackupSites.cs">
+      <Link>StsAdm\Farm\BackupSites.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\Features\ActivateFeature.cs">
+      <Link>StsAdm\Features\ActivateFeature.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\Features\DeactivateFeature.cs">
+      <Link>StsAdm\Features\DeactivateFeature.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\Features\EnumFeatures.cs">
+      <Link>StsAdm\Features\EnumFeatures.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\Lists\AddEventReceiver.cs">
+      <Link>StsAdm\Lists\AddEventReceiver.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\Lists\AddList.cs">
+      <Link>StsAdm\Lists\AddList.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\Lists\CopyList.cs">
+      <Link>StsAdm\Lists\CopyList.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\Lists\CopyListSecurity.cs">
+      <Link>StsAdm\Lists\CopyListSecurity.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\Lists\DeleteList.cs">
+      <Link>StsAdm\Lists\DeleteList.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\Lists\DeleteListField.cs">
+      <Link>StsAdm\Lists\DeleteListField.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\Lists\ExportList.cs">
+      <Link>StsAdm\Lists\ExportList.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\Lists\ExportListSecurity.cs">
+      <Link>StsAdm\Lists\ExportListSecurity.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\Lists\ImportList.cs">
+      <Link>StsAdm\Lists\ImportList.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\Lists\ImportListSecurity.cs">
+      <Link>StsAdm\Lists\ImportListSecurity.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\Lists\ListAudienceTargeting.cs">
+      <Link>StsAdm\Lists\ListAudienceTargeting.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\Lists\PublishItems.cs">
+      <Link>StsAdm\Lists\PublishItems.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\Lists\ReplaceFieldValues.cs">
+      <Link>StsAdm\Lists\ReplaceFieldValues.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\Logging\TraceLog.cs">
+      <Link>StsAdm\Logging\TraceLog.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\OperationHelpers\ExportHelper.cs">
+      <Link>StsAdm\OperationHelpers\ExportHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\OperationHelpers\ExtensionMethods.cs">
+      <Link>StsAdm\OperationHelpers\ExtensionMethods.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\OperationHelpers\ImportHelper.cs">
+      <Link>StsAdm\OperationHelpers\ImportHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\OperationHelpers\SerializationHelper.cs">
+      <Link>StsAdm\OperationHelpers\SerializationHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\OperationHelpers\SPOperation.cs">
+      <Link>StsAdm\OperationHelpers\SPOperation.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\OperationHelpers\SPParam.cs">
+      <Link>StsAdm\OperationHelpers\SPParam.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\OperationHelpers\SPParamCollection.cs">
+      <Link>StsAdm\OperationHelpers\SPParamCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\Pages\CreatePublishingPage.cs">
+      <Link>StsAdm\Pages\CreatePublishingPage.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\Pages\EnumAvailablePageLayouts.cs">
+      <Link>StsAdm\Pages\EnumAvailablePageLayouts.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\Pages\EnumUnGhostedFiles.cs">
+      <Link>StsAdm\Pages\EnumUnGhostedFiles.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\Pages\FixPublishingPagesPageLayoutUrl.cs">
+      <Link>StsAdm\Pages\FixPublishingPagesPageLayoutUrl.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\Pages\ReGhostFile.cs">
+      <Link>StsAdm\Pages\ReGhostFile.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\Permissions\DisableUserPermissionForWebApp.cs">
+      <Link>StsAdm\Permissions\DisableUserPermissionForWebApp.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\Permissions\EnableUserPermissionForWebApp.cs">
+      <Link>StsAdm\Permissions\EnableUserPermissionForWebApp.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\Permissions\EnumEffectiveBasePerms.cs">
+      <Link>StsAdm\Permissions\EnumEffectiveBasePerms.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\Permissions\SetSelfServiceSiteCreation.cs">
+      <Link>StsAdm\Permissions\SetSelfServiceSiteCreation.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\Quotas\CreateQuotaTemplate.cs">
+      <Link>StsAdm\Quotas\CreateQuotaTemplate.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\Quotas\EditQuotaTemplate.cs">
+      <Link>StsAdm\Quotas\EditQuotaTemplate.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\Quotas\SyncQuotas.cs">
+      <Link>StsAdm\Quotas\SyncQuotas.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\Security\AddUser2.cs">
+      <Link>StsAdm\Security\AddUser2.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\Security\DeleteAllUsers.cs">
+      <Link>StsAdm\Security\DeleteAllUsers.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\SiteCollections\AddAvailableSiteTemplate.cs">
+      <Link>StsAdm\SiteCollections\AddAvailableSiteTemplate.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\SiteCollections\ConvertSubSiteToSiteCollection.cs">
+      <Link>StsAdm\SiteCollections\ConvertSubSiteToSiteCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\SiteCollections\EnumAvailableSiteTemplates.cs">
+      <Link>StsAdm\SiteCollections\EnumAvailableSiteTemplates.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\SiteCollections\EnumInstalledSiteTemplates.cs">
+      <Link>StsAdm\SiteCollections\EnumInstalledSiteTemplates.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\SiteCollections\ExportNavigation.cs">
+      <Link>StsAdm\SiteCollections\ExportNavigation.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\SiteCollections\ImportNavigation.cs">
+      <Link>StsAdm\SiteCollections\ImportNavigation.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\SiteCollections\MoveWeb.cs">
+      <Link>StsAdm\SiteCollections\MoveWeb.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\SiteCollections\RemoveAvailableSiteTemplate.cs">
+      <Link>StsAdm\SiteCollections\RemoveAvailableSiteTemplate.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\SiteCollections\RepairSiteCollectionImportedFromSubSite.cs">
+      <Link>StsAdm\SiteCollections\RepairSiteCollectionImportedFromSubSite.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\SiteCollections\SetNavigationSettings.cs">
+      <Link>StsAdm\SiteCollections\SetNavigationSettings.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\SiteCollections\UpdateV2ToV3UpgradeAreaUrlMappings.cs">
+      <Link>StsAdm\SiteCollections\UpdateV2ToV3UpgradeAreaUrlMappings.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\SPValidators\SPBinaryParameterValidator.cs">
+      <Link>StsAdm\SPValidators\SPBinaryParameterValidator.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\SPValidators\SPDirectoryExistsAndValidFileNameValidator.cs">
+      <Link>StsAdm\SPValidators\SPDirectoryExistsAndValidFileNameValidator.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\SPValidators\SPDirectoryExistsValidator.cs">
+      <Link>StsAdm\SPValidators\SPDirectoryExistsValidator.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\SPValidators\SPEnableDisableValidator.cs">
+      <Link>StsAdm\SPValidators\SPEnableDisableValidator.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\SPValidators\SPEnumValidator.cs">
+      <Link>StsAdm\SPValidators\SPEnumValidator.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\SPValidators\SPFileExistsValidator.cs">
+      <Link>StsAdm\SPValidators\SPFileExistsValidator.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\SPValidators\SPGuidValidator.cs">
+      <Link>StsAdm\SPValidators\SPGuidValidator.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\SPValidators\SPIntRangeValidator.cs">
+      <Link>StsAdm\SPValidators\SPIntRangeValidator.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\SPValidators\SPLongRangeValidator.cs">
+      <Link>StsAdm\SPValidators\SPLongRangeValidator.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\SPValidators\SPMultiParameterValidator.cs">
+      <Link>StsAdm\SPValidators\SPMultiParameterValidator.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\SPValidators\SPNonEmptyValidator.cs">
+      <Link>StsAdm\SPValidators\SPNonEmptyValidator.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\SPValidators\SPNullOrNonEmptyValidator.cs">
+      <Link>StsAdm\SPValidators\SPNullOrNonEmptyValidator.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\SPValidators\SPRegexValidator.cs">
+      <Link>StsAdm\SPValidators\SPRegexValidator.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\SPValidators\SPTriParameterValidator.cs">
+      <Link>StsAdm\SPValidators\SPTriParameterValidator.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\SPValidators\SPTrueFalseValidator.cs">
+      <Link>StsAdm\SPValidators\SPTrueFalseValidator.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\SPValidators\SPUrlValidator.cs">
+      <Link>StsAdm\SPValidators\SPUrlValidator.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\SPValidators\SPUrlZoneParser.cs">
+      <Link>StsAdm\SPValidators\SPUrlZoneParser.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\SPValidators\SPZoneUrlValidator.cs">
+      <Link>StsAdm\SPValidators\SPZoneUrlValidator.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\TimerJobs\ExecAdmSvcJobs.cs">
+      <Link>StsAdm\TimerJobs\ExecAdmSvcJobs.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\UserProfiles\SetPictureUrl.cs">
+      <Link>StsAdm\UserProfiles\SetPictureUrl.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\WebApplications\AddUserPolicyForWebApp.cs">
+      <Link>StsAdm\WebApplications\AddUserPolicyForWebApp.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\WebApplications\CreateWebApp.cs">
+      <Link>StsAdm\WebApplications\CreateWebApp.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\WebApplications\DeleteWebApp.cs">
+      <Link>StsAdm\WebApplications\DeleteWebApp.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\WebApplications\ExtendWebApplication.cs">
+      <Link>StsAdm\WebApplications\ExtendWebApplication.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\WebApplications\SetBackConnectionHostNames.cs">
+      <Link>StsAdm\WebApplications\SetBackConnectionHostNames.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\WebApplications\UnExtendWebApp.cs">
+      <Link>StsAdm\WebApplications\UnExtendWebApp.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\WebParts\AddListViewWebPart.cs">
+      <Link>StsAdm\WebParts\AddListViewWebPart.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\WebParts\EnumPageWebParts.cs">
+      <Link>StsAdm\WebParts\EnumPageWebParts.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\WebParts\MoveWebPart.cs">
+      <Link>StsAdm\WebParts\MoveWebPart.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\WebParts\ReplaceWebPartContent.cs">
+      <Link>StsAdm\WebParts\ReplaceWebPartContent.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\WebParts\RetargetContentQueryWebPart.cs">
+      <Link>StsAdm\WebParts\RetargetContentQueryWebPart.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\StsAdm\WebParts\SetWebPartState.cs">
+      <Link>StsAdm\WebParts\SetWebPartState.cs</Link>
+    </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Utilities.cs">
+      <Link>Utilities.cs</Link>
+    </Compile>
+    <None Include="..\Lapointe.SharePoint2010.PowerShell\key.snk">
+      <Link>key.snk</Link>
+    </None>
+    <None Include="GenerateHelp.ps1" />
+    <None Include="install.bat" />
+    <None Include="POWERSHELL\Format\Lapointe.SharePoint.PowerShell.Cmdlets.Format.ps1xml" />
+    <None Include="POWERSHELL\Types\Lapointe.SharePoint.PowerShell.Cmdlets.Types.ps1xml" />
+    <Compile Include="Web References\WebPartPagesWebService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\WebPartPagesWebService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WebPartPagesWebService\WebPartPages.disco" />
+    <None Include="CONFIG\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{cc2c353b-9346-4697-bb38-24029855e135}</SharePointProjectItemId>
+    </None>
+    <None Include="Package\Package.package">
+      <PackageId>{71e94915-4350-4b7e-be1d-a457b8fc8693}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="POWERSHELL\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{ee8c11f6-9167-4780-a2b3-965d427a2bd3}</SharePointProjectItemId>
+    </None>
+    <Content Include="POWERSHELL\Registration\Lapointe.SharePoint.PowerShell.Cmdlets.xml" />
+    <None Include="Web References\WebPartPagesWebService\WebPartPages.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Features\" />
+    <Folder Include="ReferenceAssemblies\" />
+    <Folder Include="StsAdm\Themes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CONFIG\stsadmcommands.server.lapointe.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="CONFIG\stsadmcommands.foundation.lapointe.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="POWERSHELL\Help\Lapointe.SharePoint.PowerShell.dll-help.xml">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://demo/_vti_bin/WebPartPages.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WebPartPagesWebService\</RelPath>
+      <UpdateFromURL>http://demo/_vti_bin/WebPartPages.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{C1CDDADD-2546-481F-9697-4EA41081F2FC}">
+        <DeploymentConfigurations>
+          <DeploymentConfiguration Name="PowerShell">
+            <DeploymentSteps>Microsoft.VisualStudio.SharePoint.PreDeploymentCommand;Microsoft.VisualStudio.SharePoint.RetractSolution;Microsoft.VisualStudio.SharePoint.AddSolution;Microsoft.VisualStudio.SharePoint.PostDeploymentCommand</DeploymentSteps>
+            <RetractionSteps>Microsoft.VisualStudio.SharePoint.RetractSolution</RetractionSteps>
+          </DeploymentConfiguration>
+        </DeploymentConfigurations>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>C:\Windows\SysNative\WindowsPowerShell\v1.0\powershell.exe "&amp; {$(ProjectDir)GenerateHelp.ps1 '$(TargetDir)'}"
+cd $(ProjectDir)
+"C:\Program Files (x86)\Microsoft SDKs\Windows\v8.0A\bin\NETFX 4.0 Tools\gacutil.exe" /if "$(TargetPath)"
+Install.bat "$(TargetPath)" $(ConfigurationName)
+
+</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>"C:\Program Files (x86)\Microsoft SDKs\Windows\v8.0A\bin\NETFX 4.0 Tools\gacutil.exe" /uf "$(TargetName)"</PreBuildEvent>
+  </PropertyGroup>
+</Project>

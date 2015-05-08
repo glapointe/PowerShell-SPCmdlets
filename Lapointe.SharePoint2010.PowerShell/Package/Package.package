@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="71e94915-4350-4b7e-be1d-a457b8fc8693" solutionId="71e94915-4350-4b7e-be1d-a457b8fc8693" resetWebServer="false" deploymentServerType="ApplicationServer" name="Lapointe.SharePoint.PowerShell" isDesignerEnabled="false" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <assemblies>
+    <customAssembly location="Lapointe.PowerShell.MamlGenerator.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="..\Lapointe.SharePoint2010.PowerShell\ReferenceAssemblies\Lapointe.PowerShell.MamlGenerator.dll" />
+  </assemblies>
+  <projectItems>
+    <projectItemReference itemId="ee8c11f6-9167-4780-a2b3-965d427a2bd3" />
+    <projectItemReference itemId="cc2c353b-9346-4697-bb38-24029855e135" />
+  </projectItems>
+</package>

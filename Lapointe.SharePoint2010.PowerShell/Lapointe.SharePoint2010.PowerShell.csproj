@@ -17,7 +17,7 @@
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
     <ActiveDeploymentConfiguration>PowerShell</ActiveDeploymentConfiguration>
-    <FileUpgradeFlags>40</FileUpgradeFlags>
+    <FileUpgradeFlags>0</FileUpgradeFlags>
     <UpgradeBackupLocation>W:\Github\PowerShell-SPCmdlets\Backup\Lapointe.SharePoint2010.PowerShell\</UpgradeBackupLocation>
     <OldToolsVersion>4.0</OldToolsVersion>
     <SccProjectName>SAK</SccProjectName>

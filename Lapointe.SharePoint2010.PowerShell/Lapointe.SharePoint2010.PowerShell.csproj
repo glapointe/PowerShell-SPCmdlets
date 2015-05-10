@@ -18,12 +18,13 @@
     <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
     <ActiveDeploymentConfiguration>PowerShell</ActiveDeploymentConfiguration>
     <FileUpgradeFlags>0</FileUpgradeFlags>
-    <UpgradeBackupLocation>W:\Github\PowerShell-SPCmdlets\Backup\Lapointe.SharePoint2010.PowerShell\</UpgradeBackupLocation>
+    <UpgradeBackupLocation>W:\Github\PowerShell-SPCmdlets\Backup1\Lapointe.SharePoint2010.PowerShell\</UpgradeBackupLocation>
     <OldToolsVersion>4.0</OldToolsVersion>
     <SccProjectName>SAK</SccProjectName>
     <SccLocalPath>SAK</SccLocalPath>
     <SccAuxPath>SAK</SccAuxPath>
     <SccProvider>SAK</SccProvider>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -36,7 +37,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -108,60 +108,60 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>ReferenceAssemblies\Lapointe.PowerShell.MamlGenerator.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.BusinessData, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.BusinessData, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>ReferenceAssemblies\Microsoft.BusinessData.dll</HintPath>
+      <HintPath>W:\ReferenceAssemblies\SP2010\Microsoft.BusinessData.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Office.Policy, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.Office.Policy, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>ReferenceAssemblies\Microsoft.Office.Policy.dll</HintPath>
+      <HintPath>W:\ReferenceAssemblies\SP2010\Microsoft.Office.Policy.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Office.Server, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.Office.Server, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>ReferenceAssemblies\Microsoft.Office.Server.dll</HintPath>
+      <HintPath>W:\ReferenceAssemblies\SP2010\Microsoft.Office.Server.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Office.Server.Search, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.Office.Server.Search, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>ReferenceAssemblies\Microsoft.Office.Server.Search.dll</HintPath>
+      <HintPath>W:\ReferenceAssemblies\SP2010\Microsoft.Office.Server.Search.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Office.Server.Search.Connector, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.Office.Server.Search.Connector, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>ReferenceAssemblies\Microsoft.Office.Server.Search.Connector.dll</HintPath>
+      <HintPath>W:\ReferenceAssemblies\SP2010\Microsoft.Office.Server.Search.Connector.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Office.Server.UserProfiles, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.Office.Server.UserProfiles, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>ReferenceAssemblies\Microsoft.Office.Server.UserProfiles.dll</HintPath>
+      <HintPath>W:\ReferenceAssemblies\SP2010\Microsoft.Office.Server.UserProfiles.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Office.Word.Server, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.Office.Word.Server, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>ReferenceAssemblies\Microsoft.Office.Word.Server.dll</HintPath>
+      <HintPath>W:\ReferenceAssemblies\SP2010\Microsoft.Office.Word.Server.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>ReferenceAssemblies\Microsoft.SharePoint.dll</HintPath>
+      <HintPath>W:\ReferenceAssemblies\SP2010\Microsoft.SharePoint.dll</HintPath>
     </Reference>
-    <Reference Include="microsoft.sharepoint.portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+    <Reference Include="microsoft.sharepoint.portal, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>ReferenceAssemblies\microsoft.sharepoint.portal.dll</HintPath>
+      <HintPath>W:\ReferenceAssemblies\SP2010\microsoft.sharepoint.portal.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.SharePoint.Powershell">
-      <HintPath>ReferenceAssemblies\Microsoft.SharePoint.Powershell.dll</HintPath>
+      <HintPath>W:\ReferenceAssemblies\SP2010\Microsoft.SharePoint.Powershell.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.SharePoint.Publishing, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>ReferenceAssemblies\Microsoft.SharePoint.Publishing.dll</HintPath>
+      <HintPath>W:\ReferenceAssemblies\SP2010\Microsoft.SharePoint.Publishing.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.SharePoint.Search, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.SharePoint.Search, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>ReferenceAssemblies\Microsoft.SharePoint.Search.dll</HintPath>
+      <HintPath>W:\ReferenceAssemblies\SP2010\Microsoft.SharePoint.Search.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.SharePoint.Security, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.SharePoint.Security, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>ReferenceAssemblies\Microsoft.SharePoint.Security.dll</HintPath>
+      <HintPath>W:\ReferenceAssemblies\SP2010\Microsoft.SharePoint.Security.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.SharePoint.Taxonomy, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.SharePoint.Taxonomy, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>ReferenceAssemblies\Microsoft.SharePoint.Taxonomy.dll</HintPath>
+      <HintPath>W:\ReferenceAssemblies\SP2010\Microsoft.SharePoint.Taxonomy.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -550,7 +550,7 @@
     </VisualStudio>
   </ProjectExtensions>
   <PropertyGroup>
-    <PostBuildEvent>C:\Windows\SysNative\WindowsPowerShell\v1.0\powershell.exe -version 2 "&amp; {$(ProjectDir)GenerateHelp.ps1 '$(TargetDir)'}"
+    <PostBuildEvent>C:\Windows\SysNative\WindowsPowerShell\v1.0\powershell.exe "&amp; {$(ProjectDir)GenerateHelp.ps1 '$(TargetDir)'}"
 cd $(ProjectDir)
 "C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\gacutil.exe" /if "$(TargetPath)"
 Install.bat "$(TargetPath)" $(ConfigurationName)

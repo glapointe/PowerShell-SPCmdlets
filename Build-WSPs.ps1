@@ -3,9 +3,22 @@ function Get-ScriptDirectory {
 	$Invocation = (Get-Variable MyInvocation -Scope 1).Value
 	Split-Path $Invocation.MyCommand.Path
 }
+function Get-MSBuildPath {
+    # By default PowerShell does not have HKEY_CLASSES_ROOT defined so we have to define it
+    if ($(Get-PSDrive HKCR -ErrorAction SilentlyContinue) -eq $null) {
+		New-PSDrive -Name HKCR -PSProvider Registry -Root HKEY_CLASSES_ROOT | Out-Null
+	}
+
+    if (Test-Path HKCR:\VisualStudio.DTE.12.0) {
+		return "C:\Program Files (x86)\MSBuild\12.0\Bin\MSBuild.exe"
+	} else {
+		return "C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe"
+	}
+}
+
 Set-Location (Get-ScriptDirectory)
 $solutionFolder = Resolve-Path "."
-$msbuild = "C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe"
+$msbuild = Get-MSBuildPath
 $rootBuildFolder = Resolve-Path ".\Packages"
 $outDir = "$rootBuildFolder"
 mkdir $outDir -Force | Out-Null

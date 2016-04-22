@@ -11,7 +11,7 @@ using System.Security;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Falchion Consulting, LLC")]
 [assembly: AssemblyProduct("Lapointe.SharePoint.PowerShell")]
-[assembly: AssemblyCopyright("Copyright 2015 Falchion Consulting, LLC")]
+[assembly: AssemblyCopyright("Copyright 2016 Falchion Consulting, LLC")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -34,4 +34,4 @@ using System.Security;
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.1.0")]
+[assembly: AssemblyFileVersion("1.1.0.0")]

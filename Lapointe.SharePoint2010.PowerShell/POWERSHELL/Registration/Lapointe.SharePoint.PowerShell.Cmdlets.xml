@@ -264,6 +264,11 @@
       <ps:HelpFile>Lapointe.SharePoint.PowerShell.dll-help.xml</ps:HelpFile>
     </ps:Cmdlet>
     <ps:Cmdlet>
+      <ps:VerbName>Download-SPFile</ps:VerbName>
+      <ps:ClassName>Lapointe.SharePoint.PowerShell.Cmdlets.Lists.SPCmdletDownloadFile</ps:ClassName>
+      <ps:HelpFile>Lapointe.SharePoint.PowerShell.dll-help.xml</ps:HelpFile>
+    </ps:Cmdlet>
+    <ps:Cmdlet>
       <ps:VerbName>New-SPFile</ps:VerbName>
       <ps:ClassName>Lapointe.SharePoint.PowerShell.Cmdlets.Lists.SPCmdletNewFile</ps:ClassName>
       <ps:HelpFile>Lapointe.SharePoint.PowerShell.dll-help.xml</ps:HelpFile>

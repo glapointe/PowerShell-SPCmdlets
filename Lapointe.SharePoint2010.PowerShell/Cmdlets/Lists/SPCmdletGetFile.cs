@@ -22,10 +22,6 @@ namespace Lapointe.SharePoint.PowerShell.Cmdlets.Lists
         Remarks = "This example returns back the HRHandbook.doc file from the http://server_name/documents library.")]
     public class SPCmdletGetFile : SPGetCmdletBaseCustom<SPFile>
     {
-        /// <summary>
-        /// Gets or sets the url to the publishing page.
-        /// </summary>
-        /// <value>The name of the contentType.</value>
         [Parameter(Mandatory = true, 
             Position = 0, 
             ValueFromPipeline = true,

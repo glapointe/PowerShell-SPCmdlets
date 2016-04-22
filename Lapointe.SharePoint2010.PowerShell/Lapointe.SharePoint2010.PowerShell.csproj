@@ -17,8 +17,8 @@
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
     <ActiveDeploymentConfiguration>PowerShell</ActiveDeploymentConfiguration>
-    <FileUpgradeFlags>0</FileUpgradeFlags>
-    <UpgradeBackupLocation>W:\Github\PowerShell-SPCmdlets\Backup1\Lapointe.SharePoint2010.PowerShell\</UpgradeBackupLocation>
+    <FileUpgradeFlags>40</FileUpgradeFlags>
+    <UpgradeBackupLocation>W:\Github\PowerShell-SPCmdlets\Backup1\</UpgradeBackupLocation>
     <OldToolsVersion>4.0</OldToolsVersion>
     <SccProjectName>SAK</SccProjectName>
     <SccLocalPath>SAK</SccLocalPath>
@@ -107,6 +107,7 @@
     <Reference Include="Lapointe.PowerShell.MamlGenerator, Version=1.0.0.0, Culture=neutral, PublicKeyToken=313d176eae804710, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>ReferenceAssemblies\Lapointe.PowerShell.MamlGenerator.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.BusinessData, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -173,7 +174,7 @@
     <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.DataVisualization">
-      <HintPath>C:\Program Files (x86)\Microsoft Chart Controls\Assemblies\System.Web.DataVisualization.dll</HintPath>
+      <HintPath>W:\ReferenceAssemblies\SP2010\System.Web.DataVisualization.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml" />
@@ -205,6 +206,7 @@
     <Compile Include="Cmdlets\Groups\SPCmdletGetGroup.cs" />
     <Compile Include="Cmdlets\Groups\SPCmdletNewGroup.cs" />
     <Compile Include="Cmdlets\Groups\SPCmdletRemoveGroup.cs" />
+    <Compile Include="Cmdlets\Lists\SPCmdletDownloadFile.cs" />
     <Compile Include="Cmdlets\Lists\SPCmdletNewFile.cs" />
     <Compile Include="Cmdlets\Lists\SPCmdletNewFolder.cs" />
     <Compile Include="Cmdlets\Lists\SPCmdletAddEventReceiver.cs" />

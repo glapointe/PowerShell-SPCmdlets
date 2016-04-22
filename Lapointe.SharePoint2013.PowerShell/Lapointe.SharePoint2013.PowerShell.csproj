@@ -272,6 +272,9 @@
     <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Lists\SPCmdletDeleteList.cs">
       <Link>Cmdlets\Lists\SPCmdletDeleteList.cs</Link>
     </Compile>
+    <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Lists\SPCmdletDownloadFile.cs">
+      <Link>Cmdlets\Lists\SPCmdletDownloadFile.cs</Link>
+    </Compile>
     <Compile Include="..\Lapointe.SharePoint2010.PowerShell\Cmdlets\Lists\SPCmdletExport.cs">
       <Link>Cmdlets\Lists\SPCmdletExport.cs</Link>
     </Compile>

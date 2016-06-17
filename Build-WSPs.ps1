@@ -10,10 +10,16 @@ function Get-MSBuildPath {
 	}
 
     if (Test-Path HKCR:\VisualStudio.DTE.12.0) {
-		return "C:\Program Files (x86)\MSBuild\12.0\Bin\MSBuild.exe"
+		#return "C:\Program Files (x86)\MSBuild\12.0\Bin\MSBuild.exe"
 	} else {
-		return "C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe"
+		#return "C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe"
 	}
+    if ([System.IO.Directory]::Exists("C:\Program Files (x86)\MSBuild\12.0")) {
+        return "C:\Program Files (x86)\MSBuild\12.0\bin\MSBuild.exe"
+    } elseif ([System.IO.Directory]::Exists("C:\Program Files (x86)\MSBuild\14.0")) {
+        return "C:\Program Files (x86)\MSBuild\14.0\bin\MSBuild.exe"
+    }
+
 }
 
 Set-Location (Get-ScriptDirectory)
@@ -25,17 +31,18 @@ mkdir $outDir -Force | Out-Null
 $projects = @{
 				"$solutionFolder\Lapointe.SharePoint2010.PowerShell\Lapointe.SharePoint2010.PowerShell.csproj" = @("ReleaseMOSS", "ReleaseFoundation")
 				"$solutionFolder\Lapointe.SharePoint2013.PowerShell\Lapointe.SharePoint2013.PowerShell.csproj" = @("ReleaseMOSS", "ReleaseFoundation")
-				"$solutionFolder\Lapointe.SharePoint2016.PowerShell\Lapointe.SharePoint2016.PowerShell.csproj" = @("ReleaseMOSS")
+				"$solutionFolder\Lapointe.SharePoint2013.PowerShell\Lapointe.SharePoint2016.PowerShell.csproj" = @("ReleaseMOSS")
 			}
 foreach ($project in $projects.Keys) {
-	Write-Host "Building $project..." -ForegroundColor Blue
+	Write-Host "Building $project..." -ForegroundColor Green
 	foreach ($config in $projects[$project]) {
 		$version = "SP2010"
 		if ($project.Contains("Lapointe.SharePoint2013.PowerShell.csproj")) { $version = "SP2013" }
 		elseif ($project.Contains("Lapointe.SharePoint2016.PowerShell.csproj")) { $version = "SP2016" }
-		Write-Host "Building $config..." -ForegroundColor Blue
+		Write-Host "Building $config..." -ForegroundColor Green
 		del "$outDir\$version\$config\*.wsp" -Force -ErrorAction SilentlyContinue
-		&$msbuild $project /v:m /t:Rebuild /t:Package /p:Configuration="$config" /p:OutDir="$outDir\$version\$config"
+		&$msbuild $project /v:m /t:Rebuild /t:Package /p:Configuration="$config" /p:OutDir="$outDir\$version\$config" 
+		del "$outDir\$version\$config\*.xml" -Force -ErrorAction SilentlyContinue
 		del "$outDir\$version\$config\*.dll" -Force -ErrorAction SilentlyContinue
 		del "$outDir\$version\$config\*.pdb" -Force -ErrorAction SilentlyContinue
         del "$outDir\$version\$config\*.config" -Force -ErrorAction SilentlyContinue

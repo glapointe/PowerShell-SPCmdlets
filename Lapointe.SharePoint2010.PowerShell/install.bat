@@ -1,5 +1,5 @@
 @SET CONFIGDIR="C:\Program Files\Common Files\Microsoft Shared\web server extensions\14\CONFIG"
-@SET GACUTIL="C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\gacutil.exe"
+@SET GACUTIL="C:\Program Files (x86)\Microsoft SDKs\Windows\v8.1A\bin\NETFX 4.5.1 Tools\gacutil.exe"
 
 IF %2 == ReleaseFoundation goto Foundation
 IF %2 == DebugFoundation goto Foundation

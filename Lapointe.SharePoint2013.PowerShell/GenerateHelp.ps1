@@ -4,7 +4,7 @@
   [string] $Version = $(throw "Version is required!")
 )
 $path = Split-Path -parent $MyInvocation.MyCommand.Definition  
-$helpAsm = "$($TargetDir)\Lapointe.PowerShell.MamlGenerator.dll"
+$helpAsm = "$($ProjectDir)\ReferenceAssemblies\Lapointe.PowerShell.MamlGenerator.dll"
 $cmdletAsm = "$($TargetDir)\Lapointe.SharePoint.PowerShell.dll"
 Write-Host "Help generation work path: $path"
 Write-Host "Help generation maml assembly path: $helpAsm"

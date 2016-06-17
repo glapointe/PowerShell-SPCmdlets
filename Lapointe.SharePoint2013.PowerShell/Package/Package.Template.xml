@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="71e94915-4350-4b7e-be1d-a457b8fc8693" SharePointProductVersion="16.0">
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="71e94915-4350-4b7e-be1d-a457b8fc8693" SharePointProductVersion="15.0">
   <Assemblies>
     <Assembly Location="Lapointe.PowerShell.MamlGenerator.dll" DeploymentTarget="GlobalAssemblyCache" />
     <Assembly Location="Lapointe.SharePoint.PowerShell.dll" DeploymentTarget="GlobalAssemblyCache" />

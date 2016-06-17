@@ -8,8 +8,8 @@ Write-Host "Help generation work path: $path"
 Write-Host "Help generation maml assembly path: $helpAsm"
 Write-Host "Help generation cmdlet assembly path: $cmdletAsm"
 
-Start-Process "C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\gacutil.exe" -ArgumentList "/uf","Lapointe.PowerShell.MamlGenerator"
-Start-Process "C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\gacutil.exe" -ArgumentList "/uf","Lapointe.SharePoint.PowerShell"
+#Start-Process "C:\Program Files (x86)\Microsoft SDKs\Windows\v8.1A\bin\NETFX 4.5.1 Tools\gacutil.exe" -ArgumentList "/uf","Lapointe.PowerShell.MamlGenerator"
+Start-Process "C:\Program Files (x86)\Microsoft SDKs\Windows\v8.1A\bin\NETFX 4.5.1 Tools\gacutil.exe" -ArgumentList "/uf","Lapointe.SharePoint.PowerShell"
 
 Write-Host "Loading help assembly..."
 [System.Reflection.Assembly]::LoadFrom($helpAsm)

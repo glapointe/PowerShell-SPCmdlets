@@ -292,7 +292,7 @@ namespace Lapointe.SharePoint.PowerShell.Common.ManagedMetadata
                 termSet.IsOpenForTermCreation = true;
             }
 
-#if SP2013
+#if !SP2010
             // Updated provided by John Calvert
             XmlNodeList propertyNodes = termSetElement.SelectNodes("./CustomProperties/CustomProperty");
             if (propertyNodes != null && propertyNodes.Count > 0)
@@ -401,7 +401,7 @@ namespace Lapointe.SharePoint.PowerShell.Common.ManagedMetadata
                 }
             }
 
-#if SP2013
+#if !SP2010
             // Updated provided by John Calvert
             XmlNodeList localpropertyNodes = termElement.SelectNodes("./LocalCustomProperties/LocalCustomProperty");
             if (localpropertyNodes != null && localpropertyNodes.Count > 0)

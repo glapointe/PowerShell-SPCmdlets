@@ -79,7 +79,7 @@ namespace Lapointe.SharePoint.PowerShell.Common.WebParts
                     else
                     {
                         ((XsltListViewWebPart)lvw).ListName = list.ID.ToString("B").ToUpperInvariant();
-#if SP2013
+#if !SP2010
                         if (!string.IsNullOrEmpty(jsLink))
                             ((XsltListViewWebPart)lvw).JSLink = jsLink;
 #endif
@@ -182,7 +182,7 @@ namespace Lapointe.SharePoint.PowerShell.Common.WebParts
                     else
                     {
                         ((XsltListViewWebPart)lvw).ListName = list.ID.ToString("B").ToUpperInvariant();
-#if SP2013
+#if !SP2010
                         if (!string.IsNullOrEmpty(jsLink))
                             ((XsltListViewWebPart)lvw).JSLink = jsLink;
 #endif

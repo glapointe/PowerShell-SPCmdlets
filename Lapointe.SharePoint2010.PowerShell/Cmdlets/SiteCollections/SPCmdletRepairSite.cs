@@ -21,7 +21,7 @@ namespace Lapointe.SharePoint.PowerShell.Cmdlets.SiteCollections
     [CmdletDescription("Repair a site collection that was created using the export of a web.")]
     [Example(Code = "PS C:\\> Get-SPSite http://portal/sites/newsitecoll | Repair-SPSite -SourceSite \"http://portal/\"",
         Remarks = "This example repairs the site collection located at http://portal/sites/newsitecoll using the site collection http://portal as the model site for the repairs.")]
-#elif SP2013
+#else
     [Cmdlet("Repair", "SPMigratedSite", SupportsShouldProcess = false),
     SPCmdlet(RequireLocalFarmExist = true, RequireUserMachineAdmin = false, RequireUserFarmAdmin = true)]
     [CmdletDescription("Repair a site collection that was created using the export of a web. This cmdlet is the equivalent to the SharePoint 2010 Repair-SPSite cmdlet - it was renamed because SharePoint 2013 introduced a Repair-SPSite cmdlet which does different things.")]

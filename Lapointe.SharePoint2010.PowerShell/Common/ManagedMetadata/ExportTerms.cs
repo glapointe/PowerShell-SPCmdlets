@@ -149,7 +149,7 @@ namespace Lapointe.SharePoint.PowerShell.Common.ManagedMetadata
             element.SetAttribute("IsOpenForTermCreation", termSet.IsOpenForTermCreation.ToString());
             element.SetAttribute("CustomSortOrder", termSet.CustomSortOrder);
 
-#if SP2013
+#if !SP2010
             // Updated provided by John Calvert
             XmlElement propertiesElement = _xml.CreateElement("CustomProperties");
             element.AppendChild(propertiesElement);
@@ -235,7 +235,7 @@ namespace Lapointe.SharePoint.PowerShell.Common.ManagedMetadata
                 propertyElement.SetAttribute("Value", term.CustomProperties[key]);
             }
 
-#if SP2013
+#if !SP2010
             // Updated provided by John Calvert
             XmlElement localpropertiesElement = _xml.CreateElement("LocalCustomProperties");
             element.AppendChild(localpropertiesElement);

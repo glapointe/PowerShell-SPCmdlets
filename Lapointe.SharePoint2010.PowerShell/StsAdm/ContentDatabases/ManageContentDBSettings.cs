@@ -6,7 +6,7 @@ using Microsoft.SharePoint;
 using Microsoft.SharePoint.Administration;
 #if SP2010
 using Microsoft.SharePoint.Search.Administration;
-#elif SP2013
+#else
 using Microsoft.SharePoint.Search.Administration;
 #endif
 using Lapointe.SharePoint.PowerShell.StsAdm.SPValidators;
@@ -120,7 +120,7 @@ namespace Lapointe.SharePoint.PowerShell.StsAdm.ContentDatabases
                 // matching search server using the server address property.
 #if SP2010
                 SPSearchService service = SPFarm.Local.Services.GetValue<SPSearchService>("SPSearch");
-#elif SP2013
+#else
                 SPSearchService service = SPFarm.Local.Services.GetValue<SPSearchService>("SPSearch4");
 #endif
                 SPServiceInstance searchServiceServer = null;

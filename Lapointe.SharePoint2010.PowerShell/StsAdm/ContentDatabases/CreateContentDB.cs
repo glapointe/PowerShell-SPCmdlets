@@ -99,7 +99,7 @@ namespace Lapointe.SharePoint.PowerShell.StsAdm.ContentDatabases
                 // matching search server using the server address property.
 #if SP2010
                 SPSearchService service = SPFarm.Local.Services.GetValue<SPSearchService>("SPSearch");
-#elif SP2013
+#else
                 SPSearchService service = SPFarm.Local.Services.GetValue<SPSearchService>("SPSearch4");
 #endif
                 SPServiceInstance searchServiceServer = null;

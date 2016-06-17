@@ -56,7 +56,7 @@ namespace Lapointe.SharePoint.PowerShell
         {
 #if SP2010
             return GetGenericSetupPath(subDir, 14);
-#elif SP2013
+#else
             return GetGenericSetupPath(subDir, 15);
 #endif
         }
@@ -64,7 +64,7 @@ namespace Lapointe.SharePoint.PowerShell
         {
 #if SP2010
             return SPUtility.GetGenericSetupPath(subDir);
-#elif SP2013
+#else
             return SPUtility.GetVersionedGenericSetupPath(subDir, desiredVersion);
 #endif
         }

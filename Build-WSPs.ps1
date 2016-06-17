@@ -25,12 +25,14 @@ mkdir $outDir -Force | Out-Null
 $projects = @{
 				"$solutionFolder\Lapointe.SharePoint2010.PowerShell\Lapointe.SharePoint2010.PowerShell.csproj" = @("ReleaseMOSS", "ReleaseFoundation")
 				"$solutionFolder\Lapointe.SharePoint2013.PowerShell\Lapointe.SharePoint2013.PowerShell.csproj" = @("ReleaseMOSS", "ReleaseFoundation")
+				"$solutionFolder\Lapointe.SharePoint2016.PowerShell\Lapointe.SharePoint2016.PowerShell.csproj" = @("ReleaseMOSS")
 			}
 foreach ($project in $projects.Keys) {
 	Write-Host "Building $project..." -ForegroundColor Blue
 	foreach ($config in $projects[$project]) {
 		$version = "SP2010"
 		if ($project.Contains("Lapointe.SharePoint2013.PowerShell.csproj")) { $version = "SP2013" }
+		elseif ($project.Contains("Lapointe.SharePoint2016.PowerShell.csproj")) { $version = "SP2016" }
 		Write-Host "Building $config..." -ForegroundColor Blue
 		del "$outDir\$version\$config\*.wsp" -Force -ErrorAction SilentlyContinue
 		&$msbuild $project /v:m /t:Rebuild /t:Package /p:Configuration="$config" /p:OutDir="$outDir\$version\$config"

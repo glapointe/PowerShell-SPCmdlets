@@ -131,7 +131,7 @@ namespace Lapointe.SharePoint.PowerShell.Cmdlets.WebParts
             HelpMessage = "Add some space before the web part.")]
         public SwitchParameter AddSpace { get; set; }
 
-#if SP2013
+#if !SP2010
         [Parameter(
             Position = 12,
             Mandatory = false,

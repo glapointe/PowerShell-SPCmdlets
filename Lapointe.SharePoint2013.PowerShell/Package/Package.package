@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="71e94915-4350-4b7e-be1d-a457b8fc8693" solutionId="71e94915-4350-4b7e-be1d-a457b8fc8693" resetWebServer="false" deploymentServerType="ApplicationServer" sharePointProductVersion="15.0" name="Lapointe.SharePoint.PowerShell" isDesignerEnabled="false" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="71e94915-4350-4b7e-be1d-a457b8fc8693" solutionId="71e94915-4350-4b7e-be1d-a457b8fc8693" resetWebServer="false" deploymentServerType="ApplicationServer" sharePointProductVersion="16.0" name="Lapointe.SharePoint.PowerShell" isDesignerEnabled="false" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
   <assemblies>
     <customAssembly location="Lapointe.PowerShell.MamlGenerator.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="..\Lapointe.SharePoint2013.PowerShell\ReferenceAssemblies\Lapointe.PowerShell.MamlGenerator.dll" />
   </assemblies>

@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lapointe.SharePoint2010.PowerShell", "Lapointe.SharePoint2010.PowerShell\Lapointe.SharePoint2010.PowerShell.csproj", "{229309DE-DB5E-4824-98AD-DE321A30388B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lapointe.SharePoint2013.PowerShell", "Lapointe.SharePoint2013.PowerShell\Lapointe.SharePoint2013.PowerShell.csproj", "{229309DE-DB5E-4824-98AD-DE321A30388C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lapointe.SharePoint2016.PowerShell", "Lapointe.SharePoint2013.PowerShell\Lapointe.SharePoint2016.PowerShell.csproj", "{310A68CA-E41F-466E-BF98-0650639F393B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +55,24 @@ Global
 		{229309DE-DB5E-4824-98AD-DE321A30388C}.ReleaseMOSS|Any CPU.ActiveCfg = ReleaseMOSS|Any CPU
 		{229309DE-DB5E-4824-98AD-DE321A30388C}.ReleaseMOSS|Any CPU.Build.0 = ReleaseMOSS|Any CPU
 		{229309DE-DB5E-4824-98AD-DE321A30388C}.ReleaseMOSS|Any CPU.Deploy.0 = ReleaseMOSS|Any CPU
+		{310A68CA-E41F-466E-BF98-0650639F393B}.Debug|Any CPU.ActiveCfg = DebugFoundation|Any CPU
+		{310A68CA-E41F-466E-BF98-0650639F393B}.Debug|Any CPU.Build.0 = DebugFoundation|Any CPU
+		{310A68CA-E41F-466E-BF98-0650639F393B}.Debug|Any CPU.Deploy.0 = DebugFoundation|Any CPU
+		{310A68CA-E41F-466E-BF98-0650639F393B}.DebugFoundation|Any CPU.ActiveCfg = DebugFoundation|Any CPU
+		{310A68CA-E41F-466E-BF98-0650639F393B}.DebugFoundation|Any CPU.Build.0 = DebugFoundation|Any CPU
+		{310A68CA-E41F-466E-BF98-0650639F393B}.DebugFoundation|Any CPU.Deploy.0 = DebugFoundation|Any CPU
+		{310A68CA-E41F-466E-BF98-0650639F393B}.DebugMOSS|Any CPU.ActiveCfg = DebugMOSS|Any CPU
+		{310A68CA-E41F-466E-BF98-0650639F393B}.DebugMOSS|Any CPU.Build.0 = DebugMOSS|Any CPU
+		{310A68CA-E41F-466E-BF98-0650639F393B}.DebugMOSS|Any CPU.Deploy.0 = DebugMOSS|Any CPU
+		{310A68CA-E41F-466E-BF98-0650639F393B}.Release|Any CPU.ActiveCfg = ReleaseFoundation|Any CPU
+		{310A68CA-E41F-466E-BF98-0650639F393B}.Release|Any CPU.Build.0 = ReleaseFoundation|Any CPU
+		{310A68CA-E41F-466E-BF98-0650639F393B}.Release|Any CPU.Deploy.0 = ReleaseFoundation|Any CPU
+		{310A68CA-E41F-466E-BF98-0650639F393B}.ReleaseFoundation|Any CPU.ActiveCfg = ReleaseFoundation|Any CPU
+		{310A68CA-E41F-466E-BF98-0650639F393B}.ReleaseFoundation|Any CPU.Build.0 = ReleaseFoundation|Any CPU
+		{310A68CA-E41F-466E-BF98-0650639F393B}.ReleaseFoundation|Any CPU.Deploy.0 = ReleaseFoundation|Any CPU
+		{310A68CA-E41F-466E-BF98-0650639F393B}.ReleaseMOSS|Any CPU.ActiveCfg = ReleaseMOSS|Any CPU
+		{310A68CA-E41F-466E-BF98-0650639F393B}.ReleaseMOSS|Any CPU.Build.0 = ReleaseMOSS|Any CPU
+		{310A68CA-E41F-466E-BF98-0650639F393B}.ReleaseMOSS|Any CPU.Deploy.0 = ReleaseMOSS|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

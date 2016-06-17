@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{229309DE-DB5E-4824-98AD-DE321A30388C}</ProjectGuid>
+    <ProjectGuid>{310A68CA-E41F-466E-BF98-0650639F393B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Lapointe.SharePoint.PowerShell</RootNamespace>
@@ -20,14 +20,16 @@
     <ActiveDeploymentConfiguration>PowerShell</ActiveDeploymentConfiguration>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
-    <UpgradeBackupLocation>
-    </UpgradeBackupLocation>
+    <UpgradeBackupLocation>W:\Github\PowerShell-SPCmdlets\Backup4\</UpgradeBackupLocation>
     <OldToolsVersion>4.0</OldToolsVersion>
     <SccProjectName>SAK</SccProjectName>
     <SccLocalPath>SAK</SccLocalPath>
     <SccAuxPath>SAK</SccAuxPath>
     <SccProvider>SAK</SccProvider>
     <ProjectMode>SharePointCustomization</ProjectMode>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <MinimumOfficeToolsVersion>14.6</MinimumOfficeToolsVersion>
+    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -40,18 +42,15 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <MinimumOfficeToolsVersion>14.6</MinimumOfficeToolsVersion>
-    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'DebugMOSS|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>TRACE;DEBUG;MOSS,SP2013</DefineConstants>
+    <DefineConstants>TRACE;DEBUG;MOSS,SP2016</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <UseVSHostingProcess>false</UseVSHostingProcess>
@@ -62,7 +61,7 @@
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE;MOSS,SP2013</DefineConstants>
+    <DefineConstants>TRACE;MOSS,SP2016</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <UseVSHostingProcess>false</UseVSHostingProcess>
@@ -71,7 +70,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'DebugFoundation|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <OutputPath>bin\Debug Foundation\</OutputPath>
-    <DefineConstants>TRACE;DEBUG;SP2013</DefineConstants>
+    <DefineConstants>TRACE;DEBUG;SP2016</DefineConstants>
     <DebugType>full</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <CodeAnalysisLogFile>bin\Debug\Lapointe.SharePoint.PowerShell.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
@@ -89,7 +88,7 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ReleaseFoundation|AnyCPU' ">
     <OutputPath>bin\Release Foundation\</OutputPath>
-    <DefineConstants>TRACE;SP2013</DefineConstants>
+    <DefineConstants>TRACE;SP2016</DefineConstants>
     <Optimize>true</Optimize>
     <DebugType>pdbonly</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -114,64 +113,64 @@
       <SpecificVersion>True</SpecificVersion>
       <HintPath>ReferenceAssemblies\Lapointe.PowerShell.MamlGenerator.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.BusinessData, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.BusinessData, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <SpecificVersion>True</SpecificVersion>
-      <HintPath>W:\ReferenceAssemblies\SP2013\Microsoft.BusinessData.dll</HintPath>
+      <HintPath>W:\ReferenceAssemblies\SP2016\Microsoft.BusinessData.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Office.Policy, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.Office.Policy, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <SpecificVersion>True</SpecificVersion>
-      <HintPath>W:\ReferenceAssemblies\SP2013\Microsoft.Office.Policy.dll</HintPath>
+      <HintPath>W:\ReferenceAssemblies\SP2016\Microsoft.Office.Policy.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Office.Server, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.Office.Server, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <SpecificVersion>True</SpecificVersion>
-      <HintPath>W:\ReferenceAssemblies\SP2013\Microsoft.Office.Server.dll</HintPath>
+      <HintPath>W:\ReferenceAssemblies\SP2016\Microsoft.Office.Server.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Office.Server.Search, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.Office.Server.Search, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <SpecificVersion>True</SpecificVersion>
-      <HintPath>W:\ReferenceAssemblies\SP2013\Microsoft.Office.Server.Search.dll</HintPath>
+      <HintPath>W:\ReferenceAssemblies\SP2016\Microsoft.Office.Server.Search.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Office.Server.Search.Connector, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.Office.Server.Search.Connector, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <SpecificVersion>True</SpecificVersion>
-      <HintPath>W:\ReferenceAssemblies\SP2013\Microsoft.Office.Server.Search.Connector.dll</HintPath>
+      <HintPath>W:\ReferenceAssemblies\SP2016\Microsoft.Office.Server.Search.Connector.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Office.Server.UserProfiles, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.Office.Server.UserProfiles, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <SpecificVersion>True</SpecificVersion>
-      <HintPath>W:\ReferenceAssemblies\SP2013\Microsoft.Office.Server.UserProfiles.dll</HintPath>
+      <HintPath>W:\ReferenceAssemblies\SP2016\Microsoft.Office.Server.UserProfiles.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Office.Word.Server, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.Office.Word.Server, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <SpecificVersion>True</SpecificVersion>
-      <HintPath>W:\ReferenceAssemblies\SP2013\Microsoft.Office.Word.Server.dll</HintPath>
+      <HintPath>W:\ReferenceAssemblies\SP2016\Microsoft.Office.Word.Server.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <SpecificVersion>True</SpecificVersion>
-      <HintPath>W:\ReferenceAssemblies\SP2013\Microsoft.SharePoint.dll</HintPath>
+      <HintPath>W:\ReferenceAssemblies\SP2016\Microsoft.SharePoint.dll</HintPath>
     </Reference>
-    <Reference Include="microsoft.sharepoint.portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+    <Reference Include="microsoft.sharepoint.portal, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <SpecificVersion>True</SpecificVersion>
-      <HintPath>W:\ReferenceAssemblies\SP2013\microsoft.sharepoint.portal.dll</HintPath>
+      <HintPath>W:\ReferenceAssemblies\SP2016\microsoft.sharepoint.portal.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.SharePoint.Powershell">
-      <HintPath>W:\ReferenceAssemblies\SP2013\Microsoft.SharePoint.Powershell.dll</HintPath>
+      <HintPath>W:\ReferenceAssemblies\SP2016\Microsoft.SharePoint.Powershell.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.SharePoint.Publishing, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <SpecificVersion>True</SpecificVersion>
-      <HintPath>W:\ReferenceAssemblies\SP2013\Microsoft.SharePoint.Publishing.dll</HintPath>
+      <HintPath>W:\ReferenceAssemblies\SP2016\Microsoft.SharePoint.Publishing.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.SharePoint.Search, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.SharePoint.Search, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <SpecificVersion>True</SpecificVersion>
-      <HintPath>W:\ReferenceAssemblies\SP2013\Microsoft.SharePoint.Search.dll</HintPath>
+      <HintPath>W:\ReferenceAssemblies\SP2016\Microsoft.SharePoint.Search.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.SharePoint.Security, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.SharePoint.Security, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <SpecificVersion>True</SpecificVersion>
-      <HintPath>W:\ReferenceAssemblies\SP2013\Microsoft.SharePoint.Security.dll</HintPath>
+      <HintPath>W:\ReferenceAssemblies\SP2016\Microsoft.SharePoint.Security.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.SharePoint.Taxonomy, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.SharePoint.Taxonomy, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <SpecificVersion>True</SpecificVersion>
-      <HintPath>W:\ReferenceAssemblies\SP2013\Microsoft.SharePoint.Taxonomy.dll</HintPath>
+      <HintPath>W:\ReferenceAssemblies\SP2016\Microsoft.SharePoint.Taxonomy.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.SharePoint.WorkflowActions, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.SharePoint.WorkflowActions, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <SpecificVersion>True</SpecificVersion>
-      <HintPath>W:\ReferenceAssemblies\SP2013\Microsoft.SharePoint.WorkflowActions.dll</HintPath>
+      <HintPath>W:\ReferenceAssemblies\SP2016\Microsoft.SharePoint.WorkflowActions.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -1091,7 +1090,7 @@
     </VisualStudio>
   </ProjectExtensions>
   <PropertyGroup>
-    <PostBuildEvent>C:\Windows\SysNative\WindowsPowerShell\v1.0\powershell.exe "&amp; {$(ProjectDir)GenerateHelp.ps1 '$(TargetDir)' '$(ProjectDir)' '15.0'}"
+    <PostBuildEvent>C:\Windows\SysNative\WindowsPowerShell\v1.0\powershell.exe "&amp; {$(ProjectDir)GenerateHelp.ps1 '$(TargetDir)' '$(ProjectDir)' '16.0'}"
 cd $(ProjectDir)
 "C:\Program Files (x86)\Microsoft SDKs\Windows\v8.1A\bin\NETFX 4.5.1 Tools\gacutil.exe" /if "$(TargetPath)"
 Install.bat "$(TargetPath)" $(ConfigurationName)
